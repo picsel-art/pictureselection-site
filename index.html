@@ -3,219 +3,313 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Picture Selection | Direction artistique &amp; branding à Lille</title>
-<meta name="description" content="Picture Selection, studio de direction artistique père-fille à Lille. Identité visuelle, branding, print et digital pour marques, startups et entrepreneurs.">
+<title>Picture Selection | Direction artistique et branding à Lille</title>
+<meta name="description" content="Studio de direction artistique et de communication à Lille. Duo père-fille : identité visuelle, print, digital et stratégie pour des marques mémorisées.">
 <link rel="canonical" href="https://pictureselection.com/">
+<meta name="theme-color" content="#371A44">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Picture Selection | Direction artistique &amp; branding à Lille">
-<meta property="og:description" content="Studio de direction artistique père-fille. Identité visuelle, print et digital pour marques qui veulent être vues, comprises et retenues.">
-<meta property="og:image" content="/assets/img/picsel-logo.png">
-<meta name="twitter:card" content="summary">
-<link rel="icon" href="assets/img/picsel-logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Picture Selection">
+<meta property="og:url" content="https://pictureselection.com/">
+<meta property="og:title" content="Picture Selection | Direction artistique et branding à Lille">
+<meta property="og:description" content="Studio de direction artistique et de communication à Lille. Duo père-fille : identité visuelle, print, digital et stratégie pour des marques mémorisées.">
+<meta property="og:image" content="https://pictureselection.com/assets/img/og-picsel.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<link rel="preload" href="assets/fonts/bebas-neue-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/poppins-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Picture Selection", "alternateName": "Picsel", "url": "https://pictureselection.com/", "logo": "https://pictureselection.com/assets/img/picsel-logo.png", "image": "https://pictureselection.com/assets/img/og-picsel.jpg", "email": "contact@pictureselection.com", "slogan": "Des idées en fusion, des designs en action", "description": "Studio de direction artistique et de communication à Lille. Identité visuelle, print, digital et stratégie de communication.", "address": {"@type": "PostalAddress", "addressLocality": "Lille", "addressRegion": "Hauts-de-France", "addressCountry": "FR"}, "areaServed": "FR", "knowsLanguage": "fr", "sameAs": ["https://www.instagram.com/picture.selection", "https://www.facebook.com/picselcrea", "https://www.tiktok.com/@picselcrea", "https://www.behance.net/picture-selection"]}</script>
 </head>
 <body>
-
-<div class="intro-loader" data-intro-loader aria-hidden="true">
-  <div class="intro-center">
-    <div class="intro-ring">
-      <svg viewBox="0 0 100 100">
-        <circle class="intro-ring-track" cx="50" cy="50" r="46"></circle>
-        <circle class="intro-ring-bar" cx="50" cy="50" r="46"></circle>
-      </svg>
-      <img class="intro-logo" src="assets/img/picsel-logo.webp" alt="">
-    </div>
+<div class="intro" data-intro aria-hidden="true">
+  <div class="intro-box">
+    <span class="intro-crop tl"></span><span class="intro-crop tr"></span><span class="intro-crop bl"></span><span class="intro-crop br"></span>
+    <img src="assets/img/picsel-logo-mark.webp" width="168" height="168" alt="">
+    <svg class="pencil" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><path pathLength="1" d="M150 22C110 4 50 14 24 58C0 100 14 160 62 184C112 206 170 186 188 138C204 92 182 40 136 22C120 16 104 15 90 17"/></svg>
   </div>
 </div>
 <script>
 (function () {
-  var skip = false;
-  try { skip = sessionStorage.getItem("psIntroPlayed") === "1"; } catch (e) {}
-  if (!skip && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) skip = true;
-  if (skip) {
-    var loader = document.currentScript.previousElementSibling;
-    if (loader) loader.style.display = "none";
-  }
+  var el = document.querySelector('[data-intro]'), skip = false;
+  try { skip = sessionStorage.getItem('psIntro') === '1'; } catch (e) {}
+  if (!skip && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) skip = true;
+  if (skip && el) el.parentNode.removeChild(el);
 })();
 </script>
-<noscript><style>.intro-loader{display:none!important}</style></noscript>
+<a class="skip" href="#contenu">Aller au contenu</a>
 
-<div class="site-bg"></div>
-
-<div class="page">
-
-  <!-- HEADER -->
-  <header class="header">
-    <a href="index.html" class="brand">
-      <img src="assets/img/picsel-logo.webp" alt="Picture Selection">
-      <span><span>Picture </span><span class="brand-red">Selection</span></span>
-    </a>
-    <button class="hamburger" data-menu-toggle aria-label="Menu" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-    <nav class="nav">
-      <a href="index.html" class="nav-link is-current">Accueil</a>
-      <a href="about.html" class="nav-link">Qui sommes-nous ?</a>
-      <a href="portfolio.html" class="nav-link">Portfolio</a>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="contact.html" class="nav-cta">Contact</a>
-    </nav>
-  </header>
-
-  <nav class="mobile-nav" data-mobile-nav>
-    <a href="index.html" class="is-current">Accueil</a>
-    <a href="about.html">Qui sommes-nous ?</a>
+<header class="hd" data-header>
+  <a class="hd-logo" href="index.html" aria-label="Picture Selection, accueil" aria-current="page"><img src="assets/img/picsel-logo-mark.webp" width="44" height="44" alt=""></a>
+  <nav class="hd-nav" aria-label="Navigation principale">
+    <a href="about.html">Qui sommes-nous&nbsp;?</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
+    <a class="btn btn--sm" href="contact.html">Contact</a>
   </nav>
+  <button class="hd-menu" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle><span data-menu-label>Menu</span></button>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <img class="hero-logo reveal" src="assets/img/picsel-logo.webp" alt="Picture Selection">
-    <span class="reveal" style="font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(247,245,240,.65);font-weight:600">Studio de Direction Artistique &amp; Communication Globale</span>
-    <h1 class="reveal">Donner du sens à votre image, <span class="accent">une passion partagée</span>.</h1>
-    <p class="reveal">Identité visuelle, print et digital&nbsp;: notre duo père-fille combine sensibilité artistique et expertise pour des marques vues, comprises et mémorisées.</p>
-    <div class="hero-actions reveal">
-      <a href="portfolio.html" class="btn btn-primary">Voir le portfolio</a>
-      <a href="contact.html" class="btn btn-outline">Nous contacter</a>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <section class="section">
-    <div class="stats">
-      <div class="stat reveal">
-        <span class="stat-num" data-count-to="2023">2023</span>
-        <span class="stat-label">En activité depuis</span>
-      </div>
-      <div class="stat reveal">
-        <span class="stat-num" data-count-to="25" data-count-suffix=" ANS">25 ANS</span>
-        <span class="stat-label">D'expérience créative</span>
-      </div>
-      <div class="stat reveal">
-        <span class="stat-num" data-count-to="3.2" data-count-decimals="1" data-count-suffix="K">3.2K</span>
-        <span class="stat-label">Pixels déplacés au millimètre près</span>
-      </div>
-      <div class="stat reveal">
-        <span class="stat-num" data-count-to="15">15</span>
-        <span class="stat-label">Clients qui nous font confiance</span>
-      </div>
-      <div class="stat reveal">
-        <span class="stat-num" data-count-to="2">2</span>
-        <span class="stat-label">Personnes dans l'équipe</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- PORTFOLIO TEASER -->
-  <section class="section">
-    <div class="wrap">
-      <div class="portfolio-head reveal">
-        <h2>Sélection de projets</h2>
-        <a href="portfolio.html" class="portfolio-link" style="border-color:#F7F5F0">Voir tout le portfolio →</a>
-      </div>
-      <div class="pf-grid">
-
-        <div class="pf-project reveal" data-project data-slug="festival-marrakech" data-title="Festival International du Film de Marrakech" data-max="20">
-          <div class="pf-project-cover">
-            <img data-project-cover alt="Festival International du Film de Marrakech" loading="lazy">
-            <div class="pf-project-placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="15" rx="2"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M21 16l-5.5-5.5L3 19"/></svg>
-              <span>Photos à venir</span>
-            </div>
-            <div class="pf-project-overlay"><span class="pf-project-cta">Voir la galerie →</span></div>
-          </div>
-          <div class="pf-project-meta">
-            <span class="pf-project-tag">Direction artistique &amp; Print</span>
-            <span class="pf-project-title">Festival International du Film de Marrakech</span>
-          </div>
-        </div>
-
-        <div class="pf-project reveal" data-project data-slug="cryptr" data-title="Cryptr" data-max="10">
-          <div class="pf-project-cover">
-            <img data-project-cover alt="Cryptr, identité visuelle" loading="lazy">
-            <div class="pf-project-placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="15" rx="2"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M21 16l-5.5-5.5L3 19"/></svg>
-              <span>Photos à venir</span>
-            </div>
-            <div class="pf-project-overlay"><span class="pf-project-cta">Voir la galerie →</span></div>
-          </div>
-          <div class="pf-project-meta">
-            <span class="pf-project-tag">Identité visuelle</span>
-            <span class="pf-project-title">Cryptr</span>
-          </div>
-        </div>
-
-        <div class="pf-project reveal" data-project data-slug="visionet-drone" data-title="Visionet Drone" data-max="10">
-          <div class="pf-project-cover">
-            <img data-project-cover alt="Visionet Drone, identité visuelle" loading="lazy">
-            <div class="pf-project-placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="15" rx="2"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M21 16l-5.5-5.5L3 19"/></svg>
-              <span>Photos à venir</span>
-            </div>
-            <div class="pf-project-overlay"><span class="pf-project-cta">Voir la galerie →</span></div>
-          </div>
-          <div class="pf-project-meta">
-            <span class="pf-project-tag">Identité visuelle</span>
-            <span class="pf-project-title">Visionet Drone</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- LIGHTBOX -->
-  <div class="lightbox" data-lightbox hidden>
-    <button class="lightbox-close" data-lightbox-close aria-label="Fermer">&times;</button>
-    <button class="lightbox-prev" data-lightbox-prev aria-label="Photo précédente">‹</button>
-    <button class="lightbox-next" data-lightbox-next aria-label="Photo suivante">›</button>
-    <div class="lightbox-stage">
-      <img class="lightbox-image" data-lightbox-image src="" alt="">
-    </div>
-    <div class="lightbox-meta">
-      <span class="lightbox-title" data-lightbox-title></span>
-      <span class="lightbox-count" data-lightbox-count></span>
-    </div>
+<div class="menu" id="menu" data-menu hidden>
+  <nav aria-label="Menu">
+    <ul>
+      <li><a class="menu-link" href="index.html" style="--i:0" aria-current="page">Accueil</a></li>
+      <li><a class="menu-link" href="about.html" style="--i:1">Qui sommes-nous&nbsp;?</a></li>
+      <li><a class="menu-link" href="portfolio.html" style="--i:2">Portfolio</a></li>
+      <li><a class="menu-link" href="services.html" style="--i:3">Services</a></li>
+      <li><a class="menu-link" href="contact.html" style="--i:4">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="menu-foot">
+    <a href="mailto:contact@pictureselection.com">contact@pictureselection.com</a>
+    <p>Lille, Hauts-de-France</p>
   </div>
-
-  <!-- FOOTER -->
-  <footer class="footer footer--home">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <span class="brand"><img src="assets/img/picsel-logo.webp" alt="Picture Selection"><span>Picture </span><span class="brand-red">Selection</span></span>
-        <p>Studio de Direction Artistique &amp; Communication Globale.</p>
-      </div>
-      <div class="footer-cols">
-        <div class="footer-col">
-          <span class="footer-col-title">Navigation</span>
-          <a href="about.html">Qui sommes-nous ?</a>
-          <a href="portfolio.html">Portfolio</a>
-          <a href="services.html">Services</a>
-          <a href="contact.html">Contact</a>
-        </div>
-        <div class="footer-col">
-          <span class="footer-col-title">Contact</span>
-          <a href="mailto:contact@pictureselection.com">contact@pictureselection.com</a>
-          <a href="https://www.instagram.com/picture.selection">Instagram</a>
-          <a href="https://www.facebook.com/picselcrea">Facebook</a>
-          <a href="https://www.tiktok.com/@picselcrea">TikTok</a>
-          <a href="https://www.behance.net/picture-selection">Behance</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Picture Selection · Branding &amp; Direction Artistique</span>
-      <span>Lille · Hauts-de-France</span>
-    </div>
-  </footer>
-
 </div>
 
-<script src="assets/js/main.js"></script>
+<main id="contenu" tabindex="-1">
+<section class="hero hero--home">
+  <div class="wrap hero-grid">
+    <h1 class="hero-title t-xl"><span class="kicker">Studio de direction artistique et de communication à Lille</span><span class="hero-main" data-split>Des marques vues, comprises et <span class="r">mémorisées.</span></span></h1>
+    <div class="hero-side">
+      <p class="lead">Nous sommes un duo père-fille. L’œil d’un directeur artistique, la tête d’une experte en communication.</p>
+      <a class="link" href="portfolio.html">Voir les projets</a>
+    </div>
+  </div>
+</section>
+
+<section class="sheet" aria-labelledby="sheet-title">
+  <h2 class="sr-only" id="sheet-title">Planche contact des projets</h2>
+  <div class="sheet-rows" data-sheet>
+    <ul class="sheet-row" data-drift="-1">
+      <li class="frame is-sel" data-frame>
+        <span class="frame-no mono" aria-hidden="true">1A</span>
+        <button class="frame-btn" type="button" data-gallery="festival-marrakech" data-title="Festival international du film de Marrakech" aria-label="Ouvrir la galerie Festival international du film de Marrakech, 17 visuels">
+          <img src="assets/img/portfolio/festival-marrakech/1-thumb.webp" width="800" height="500" alt="" loading="eager" decoding="async">
+          <svg class="pencil" viewBox="0 0 400 280" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M318 26C250 4 120 8 58 52C8 88 6 176 64 226C128 280 288 278 352 222C404 176 400 84 330 40C296 20 246 12 200 14"/></svg>
+        </button>
+        <span class="frame-name">Festival international du film de Marrakech</span>
+      </li>
+      <li class="frame" data-frame>
+        <span class="frame-no mono" aria-hidden="true">2A</span>
+        <button class="frame-btn" type="button" data-gallery="trophee-hassan-ii" data-title="Trophée Hassan II de Golf" aria-label="Ouvrir la galerie Trophée Hassan II de Golf, 15 visuels">
+          <img src="assets/img/portfolio/trophee-hassan-ii/1-thumb.webp" width="800" height="566" alt="" loading="eager" decoding="async">
+          <svg class="pencil" viewBox="0 0 400 280" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M318 26C250 4 120 8 58 52C8 88 6 176 64 226C128 280 288 278 352 222C404 176 400 84 330 40C296 20 246 12 200 14"/></svg>
+        </button>
+        <span class="frame-name">Trophée Hassan II de Golf</span>
+      </li>
+      <li class="frame" data-frame>
+        <span class="frame-no mono" aria-hidden="true">3A</span>
+        <button class="frame-btn" type="button" data-gallery="cryptr" data-title="Cryptr" aria-label="Ouvrir la galerie Cryptr, 10 visuels">
+          <img src="assets/img/portfolio/cryptr/1-thumb.webp" width="800" height="500" alt="" loading="eager" decoding="async">
+          <svg class="pencil" viewBox="0 0 400 280" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M318 26C250 4 120 8 58 52C8 88 6 176 64 226C128 280 288 278 352 222C404 176 400 84 330 40C296 20 246 12 200 14"/></svg>
+        </button>
+        <span class="frame-name">Cryptr</span>
+      </li>
+      <li class="frame" data-frame>
+        <span class="frame-no mono" aria-hidden="true">4A</span>
+        <button class="frame-btn" type="button" data-gallery="boheme-maison" data-title="Bohème Maison" aria-label="Ouvrir la galerie Bohème Maison, 6 visuels">
+          <img src="assets/img/portfolio/boheme-maison/2-thumb.webp" width="800" height="800" alt="" loading="eager" decoding="async">
+          <svg class="pencil" viewBox="0 0 400 280" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M318 26C250 4 120 8 58 52C8 88 6 176 64 226C128 280 288 278 352 222C404 176 400 84 330 40C296 20 246 12 200 14"/></svg>
+        </button>
+        <span class="frame-name">Bohème Maison</span>
+      </li>
+      <li class="frame" data-frame>
+        <span class="frame-no mono" aria-hidden="true">5A</span>
+        <button class="frame-btn" type="button" data-gallery="visionet-drone" data-title="Visionet Drone" aria-label="Ouvrir la galerie Visionet Drone, 6 visuels">
+          <img src="assets/img/portfolio/visionet-drone/1-thumb.webp" width="800" height="566" alt="" loading="eager" decoding="async">
+          <svg class="pencil" viewBox="0 0 400 280" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M318 26C250 4 120 8 58 52C8 88 6 176 64 226C128 280 288 278 352 222C404 176 400 84 330 40C296 20 246 12 200 14"/></svg>
+        </button>
+        <span class="frame-name">Visionet Drone</span>
+      </li>
+    </ul>
+    <ul class="sheet-row" data-drift="1">
+      <li class="frame" data-frame>
+        <span class="frame-no mono" aria-hidden="true">6A</span>
+        <button class="frame-btn" type="button" data-gallery="blue-beach" data-title="Blue Beach" aria-label="Ouvrir la galerie Blue Beach, 6 visuels">
+          <img src="assets/img/portfolio/blue-beach/1-thumb.webp" width="800" height="480" alt="" loading="lazy" decoding="async">
+          <svg class="pencil" viewBox="0 0 400 280" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M318 26C250 4 120 8 58 52C8 88 6 176 64 226C128 280 288 278 352 222C404 176 400 84 330 40C296 20 246 12 200 14"/></svg>
+        </button>
+        <span class="frame-name">Blue Beach</span>
+      </li>
+      <li class="frame" data-frame>
+        <span class="frame-no mono" aria-hidden="true">7A</span>
+        <button class="frame-btn" type="button" data-gallery="ncare" data-title="N&#x27;CARE" aria-label="Ouvrir la galerie N&#x27;CARE, 7 visuels">
+          <img src="assets/img/portfolio/ncare/1-thumb.webp" width="800" height="533" alt="" loading="lazy" decoding="async">
+          <svg class="pencil" viewBox="0 0 400 280" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M318 26C250 4 120 8 58 52C8 88 6 176 64 226C128 280 288 278 352 222C404 176 400 84 330 40C296 20 246 12 200 14"/></svg>
+        </button>
+        <span class="frame-name">N&#x27;CARE</span>
+      </li>
+      <li class="frame" data-frame>
+        <span class="frame-no mono" aria-hidden="true">8A</span>
+        <button class="frame-btn" type="button" data-gallery="vif" data-title="Vivons en Forme (VIF)" aria-label="Ouvrir la galerie Vivons en Forme (VIF), 2 visuels">
+          <img src="assets/img/portfolio/vif/1-thumb.webp" width="800" height="533" alt="" loading="lazy" decoding="async">
+          <svg class="pencil" viewBox="0 0 400 280" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M318 26C250 4 120 8 58 52C8 88 6 176 64 226C128 280 288 278 352 222C404 176 400 84 330 40C296 20 246 12 200 14"/></svg>
+        </button>
+        <span class="frame-name">Vivons en Forme (VIF)</span>
+      </li>
+      <li class="frame" data-frame>
+        <span class="frame-no mono" aria-hidden="true">9A</span>
+        <button class="frame-btn" type="button" data-gallery="cma" data-title="CMA Hauts-de-France" aria-label="Ouvrir la galerie CMA Hauts-de-France, 2 visuels">
+          <img src="assets/img/portfolio/cma/1-thumb.webp" width="800" height="621" alt="" loading="lazy" decoding="async">
+          <svg class="pencil" viewBox="0 0 400 280" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M318 26C250 4 120 8 58 52C8 88 6 176 64 226C128 280 288 278 352 222C404 176 400 84 330 40C296 20 246 12 200 14"/></svg>
+        </button>
+        <span class="frame-name">CMA Hauts-de-France</span>
+      </li>
+    </ul>
+  </div>
+  <div class="wrap sheet-foot">
+    <p class="mono sheet-hint"><span class="hint-touch">Glissez pour parcourir, touchez une image pour ouvrir sa galerie.</span><span class="hint-mouse">Cliquez sur une image pour ouvrir sa galerie.</span></p>
+    <a class="link" href="portfolio.html">Voir les 9 projets</a>
+  </div>
+</section>
+
+<section class="sec proofs">
+  <div class="wrap">
+    <h2 class="t-l" data-split>Une preuve vaut mieux qu’une <span class="r">promesse</span></h2>
+    <ul class="proofs-list">
+      <li class="proof" data-reveal><span class="proof-n">25 ans</span><p>de métier entre Alger, Rabat, Paris et Lille, dont Ogilvy et DDB.</p></li>
+      <li class="proof" data-reveal><span class="proof-n">4 éditions</span><p>du Festival international du film de Marrakech, en direction artistique et production print.</p></li>
+      <li class="proof" data-reveal><span class="proof-n">8 ans</span><p>de direction artistique exclusive pour le Trophée Hassan II de Golf.</p></li>
+      <li class="proof" data-reveal><span class="proof-n">2 regards</span><p>la forme et la stratégie, réunies dans une seule voix.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec work">
+  <div class="wrap">
+    <div class="work-head">
+      <h2 class="t-l" data-split>Trois projets <span class="r">sélectionnés</span></h2>
+      <a class="link" href="portfolio.html">Voir tout le portfolio</a>
+    </div>
+    <ul class="cards">
+      <li class="card card--a" data-reveal>
+        <button class="card-btn" type="button" data-gallery="festival-marrakech" data-title="Festival international du film de Marrakech" aria-label="Ouvrir la galerie Festival international du film de Marrakech, 17 visuels">
+          <span class="media"><span class="px" data-parallax><img src="assets/img/portfolio/festival-marrakech/1-thumb.webp" srcset="assets/img/portfolio/festival-marrakech/1-thumb.webp 800w, assets/img/portfolio/festival-marrakech/1.webp 1600w" sizes="(min-width: 900px) 58vw, 100vw" width="800" height="500" alt="" loading="lazy" decoding="async"></span></span>
+          <span class="sel" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="sel-dims mono">1600 × 1000 px</span></span>
+        </button>
+        <div class="card-meta">
+          <h3 class="card-title">Festival international du film de Marrakech</h3>
+          <p class="card-tag">Direction artistique et print</p>
+          <p class="card-count mono">17 visuels</p>
+        </div>
+      </li>
+      <li class="card card--b" data-reveal>
+        <button class="card-btn" type="button" data-gallery="trophee-hassan-ii" data-title="Trophée Hassan II de Golf" aria-label="Ouvrir la galerie Trophée Hassan II de Golf, 15 visuels">
+          <span class="media"><span class="px" data-parallax><img src="assets/img/portfolio/trophee-hassan-ii/1-thumb.webp" srcset="assets/img/portfolio/trophee-hassan-ii/1-thumb.webp 800w, assets/img/portfolio/trophee-hassan-ii/1.webp 1600w" sizes="(min-width: 900px) 42vw, 100vw" width="800" height="566" alt="" loading="lazy" decoding="async"></span></span>
+          <span class="sel" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="sel-dims mono">1600 × 1132 px</span></span>
+        </button>
+        <div class="card-meta">
+          <h3 class="card-title">Trophée Hassan II de Golf</h3>
+          <p class="card-tag">Charte graphique et print</p>
+          <p class="card-count mono">15 visuels</p>
+        </div>
+      </li>
+      <li class="card card--w" data-reveal>
+        <button class="card-btn" type="button" data-gallery="cryptr" data-title="Cryptr" aria-label="Ouvrir la galerie Cryptr, 10 visuels">
+          <span class="media"><span class="px" data-parallax><img src="assets/img/portfolio/cryptr/1-thumb.webp" srcset="assets/img/portfolio/cryptr/1-thumb.webp 800w, assets/img/portfolio/cryptr/1.webp 1600w" sizes="(min-width: 900px) 66vw, 100vw" width="800" height="500" alt="" loading="lazy" decoding="async"></span></span>
+          <span class="sel" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="sel-dims mono">1600 × 1000 px</span></span>
+        </button>
+        <div class="card-meta">
+          <h3 class="card-title">Cryptr</h3>
+          <p class="card-tag">Identité visuelle</p>
+          <p class="card-count mono">10 visuels</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec light">
+  <div class="wrap">
+    <h2 class="t-l" data-split>Une identité <span class="r">cohérente,</span> du logo au fil Instagram</h2>
+    <div class="offer">
+      <div class="offer-col">
+        <h3 class="t-s">Au cœur</h3>
+        <ul>
+          <li>Identité visuelle et branding</li>
+          <li>Direction artistique</li>
+          <li>Stratégie de communication</li>
+        </ul>
+      </div>
+      <div class="offer-col">
+        <h3 class="t-s">Autour</h3>
+        <ul>
+          <li>Print, édition et packaging</li>
+          <li>Menus, cartes et supports commerciaux</li>
+          <li>Réseaux sociaux et contenus</li>
+          <li>Sites et boutiques en ligne</li>
+        </ul>
+      </div>
+    </div>
+    <a class="link" href="services.html">Voir le détail des services</a>
+  </div>
+</section>
+
+<section class="sec cta">
+  <div class="wrap cta-grid">
+    <h2 class="t-l" data-split>Un projet commence par un <span class="r">brief</span></h2>
+    <div class="cta-side">
+      <p class="lead">Même flou, il suffit pour un premier échange. Nous revenons vers vous rapidement.</p>
+      <a class="btn" href="contact.html">Écrire au studio</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <p class="ft-sign t-l" data-split>«&nbsp;Des idées en fusion, des designs en <span class="nw"><span class="r">action</span>&nbsp;»</span></p>
+    <div class="ft-grid">
+      <div class="ft-id">
+        <img src="assets/img/picsel-logo-mark.webp" width="72" height="72" alt="Picture Selection" loading="lazy">
+        <p>Studio de direction artistique et de communication. Lille, Hauts-de-France.</p>
+      </div>
+      <nav class="ft-col" aria-label="Pages du site">
+        <p class="ft-h">Pages</p>
+        <a href="index.html">Accueil</a>
+        <a href="about.html">Qui sommes-nous&nbsp;?</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="ft-col">
+        <p class="ft-h">Contact</p>
+        <a href="mailto:contact@pictureselection.com">contact@pictureselection.com</a>
+        <p>À distance, partout en France</p>
+      </div>
+      <div class="ft-col">
+        <p class="ft-h">Réseaux</p>
+        <a href="https://www.instagram.com/picture.selection">Instagram</a>
+        <a href="https://www.facebook.com/picselcrea">Facebook</a>
+        <a href="https://www.tiktok.com/@picselcrea">TikTok</a>
+        <a href="https://www.behance.net/picture-selection">Behance</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p>© 2026 Picture Selection</p>
+      <a href="#contenu">Haut de page</a>
+    </div>
+  </div>
+</footer>
+<div class="lb" role="dialog" aria-modal="true" aria-labelledby="lb-title" data-lightbox hidden>
+  <div class="lb-top">
+    <p class="lb-title" id="lb-title" data-lb-title></p>
+    <button class="lb-btn" type="button" data-lb-close>Fermer</button>
+  </div>
+  <figure class="lb-stage" data-lb-stage>
+    <img data-lb-img alt="">
+  </figure>
+  <div class="lb-bottom">
+    <button class="lb-btn" type="button" data-lb-prev>Précédent</button>
+    <p class="mono lb-count" data-lb-count aria-hidden="true"></p>
+    <button class="lb-btn" type="button" data-lb-next>Suivant</button>
+  </div>
+  <p class="sr-only" aria-live="polite" data-lb-live></p>
+</div>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>

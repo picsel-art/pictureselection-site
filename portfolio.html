@@ -3,283 +3,236 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Portfolio | Branding, Print, Digital &amp; UX/UI | Picture Selection</title>
-<meta name="description" content="Découvrez les réalisations de Picture Selection : identité visuelle, branding, design éditorial, print et digital pour marques et entrepreneurs.">
+<title>Portfolio | Identité visuelle, print et digital | Picture Selection</title>
+<meta name="description" content="9 projets de Picture Selection : Festival international du film de Marrakech, Trophée Hassan II de Golf, Cryptr, Bohème Maison, Visionet Drone et plus.">
 <link rel="canonical" href="https://pictureselection.com/portfolio.html">
+<meta name="theme-color" content="#371A44">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Portfolio | Picture Selection">
-<meta property="og:description" content="Branding, print, digital et UX/UI : l'art de raconter une marque en images.">
-<meta property="og:image" content="/assets/img/picsel-logo.png">
-<meta name="twitter:card" content="summary">
-<link rel="icon" href="assets/img/picsel-logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Picture Selection">
+<meta property="og:url" content="https://pictureselection.com/portfolio.html">
+<meta property="og:title" content="Portfolio | Identité visuelle, print et digital | Picture Selection">
+<meta property="og:description" content="9 projets de Picture Selection : Festival international du film de Marrakech, Trophée Hassan II de Golf, Cryptr, Bohème Maison, Visionet Drone et plus.">
+<meta property="og:image" content="https://pictureselection.com/assets/img/og-picsel.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<link rel="preload" href="assets/fonts/bebas-neue-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/poppins-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 
-<div class="intro-loader" data-intro-loader aria-hidden="true">
-  <div class="intro-center">
-    <div class="intro-ring">
-      <svg viewBox="0 0 100 100">
-        <circle class="intro-ring-track" cx="50" cy="50" r="46"></circle>
-        <circle class="intro-ring-bar" cx="50" cy="50" r="46"></circle>
-      </svg>
-      <img class="intro-logo" src="assets/img/picsel-logo.webp" alt="">
-    </div>
-  </div>
-</div>
-<script>
-(function () {
-  var skip = false;
-  try { skip = sessionStorage.getItem("psIntroPlayed") === "1"; } catch (e) {}
-  if (!skip && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) skip = true;
-  if (skip) {
-    var loader = document.currentScript.previousElementSibling;
-    if (loader) loader.style.display = "none";
-  }
-})();
-</script>
-<noscript><style>.intro-loader{display:none!important}</style></noscript>
+<a class="skip" href="#contenu">Aller au contenu</a>
 
-<div class="site-bg"></div>
-
-<div class="page">
-
-  <!-- HEADER -->
-  <header class="header">
-    <a href="index.html" class="brand">
-      <img src="assets/img/picsel-logo.webp" alt="Picture Selection">
-      <span><span>Picture </span><span class="brand-red">Selection</span></span>
-    </a>
-    <button class="hamburger" data-menu-toggle aria-label="Menu" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-    <nav class="nav">
-      <a href="index.html" class="nav-link">Accueil</a>
-      <a href="about.html" class="nav-link">Qui sommes-nous ?</a>
-      <a href="portfolio.html" class="nav-link is-current">Portfolio</a>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="contact.html" class="nav-cta">Contact</a>
-    </nav>
-  </header>
-
-  <nav class="mobile-nav" data-mobile-nav>
-    <a href="index.html">Accueil</a>
-    <a href="about.html">Qui sommes-nous ?</a>
-    <a href="portfolio.html" class="is-current">Portfolio</a>
+<header class="hd" data-header>
+  <a class="hd-logo" href="index.html" aria-label="Picture Selection, accueil"><img src="assets/img/picsel-logo-mark.webp" width="44" height="44" alt=""></a>
+  <nav class="hd-nav" aria-label="Navigation principale">
+    <a href="about.html">Qui sommes-nous&nbsp;?</a>
+    <a href="portfolio.html" aria-current="page">Portfolio</a>
     <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
+    <a class="btn btn--sm" href="contact.html">Contact</a>
   </nav>
+  <button class="hd-menu" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle><span data-menu-label>Menu</span></button>
+</header>
 
-  <!-- HERO -->
-  <section class="page-hero">
-    <span class="eyebrow reveal">Nos réalisations</span>
-    <h1 class="reveal">Portfolio</h1>
-    <p class="reveal">Branding, print, digital&nbsp;: découvrez comment nos regards complémentaires se matérialisent en images pleines de sens.</p>
-  </section>
-
-  <!-- PROJETS -->
-  <section class="section">
-   <div class="wrap">
-    <div class="pf-grid">
-
-      <div class="pf-project reveal" data-project data-slug="trophee-hassan-ii" data-title="Charte graphique du Trophée Hassan II de Golf" data-max="15" data-cover="1">
-        <div class="pf-project-cover">
-          <img data-project-cover alt="Charte graphique du Trophée Hassan II de Golf" loading="lazy">
-          <div class="pf-project-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="15" rx="2"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M21 16l-5.5-5.5L3 19"/></svg>
-            <span>Photos à venir</span>
-          </div>
-          <div class="pf-project-overlay"><span class="pf-project-cta">Voir la galerie →</span></div>
-        </div>
-        <div class="pf-project-meta">
-          <span class="pf-project-tag">Identité de marque &amp; Print</span>
-          <span class="pf-project-title">Charte graphique du Trophée Hassan II de Golf</span>
-          <span class="pf-project-count" data-project-count></span>
-        </div>
-      </div>
-
-      <div class="pf-project reveal" data-project data-slug="festival-marrakech" data-title="Festival International du Film de Marrakech" data-max="20">
-        <div class="pf-project-cover">
-          <img data-project-cover alt="Festival International du Film de Marrakech" loading="lazy">
-          <div class="pf-project-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="15" rx="2"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M21 16l-5.5-5.5L3 19"/></svg>
-            <span>Photos à venir</span>
-          </div>
-          <div class="pf-project-overlay"><span class="pf-project-cta">Voir la galerie →</span></div>
-        </div>
-        <div class="pf-project-meta">
-          <span class="pf-project-tag">Direction artistique &amp; Print</span>
-          <span class="pf-project-title">Festival International du Film de Marrakech</span>
-          <span class="pf-project-count" data-project-count></span>
-        </div>
-      </div>
-
-      <div class="pf-project reveal" data-project data-slug="cryptr" data-title="Cryptr" data-max="10">
-        <div class="pf-project-cover">
-          <img data-project-cover alt="Cryptr, identité visuelle" loading="lazy">
-          <div class="pf-project-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="15" rx="2"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M21 16l-5.5-5.5L3 19"/></svg>
-            <span>Photos à venir</span>
-          </div>
-          <div class="pf-project-overlay"><span class="pf-project-cta">Voir la galerie →</span></div>
-        </div>
-        <div class="pf-project-meta">
-          <span class="pf-project-tag">Identité visuelle</span>
-          <span class="pf-project-title">Cryptr</span>
-          <span class="pf-project-count" data-project-count></span>
-        </div>
-      </div>
-
-      <div class="pf-project reveal" data-project data-slug="blue-beach" data-title="Blue Beach" data-max="10">
-        <div class="pf-project-cover">
-          <img data-project-cover alt="Blue Beach, identité visuelle" loading="lazy">
-          <div class="pf-project-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="15" rx="2"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M21 16l-5.5-5.5L3 19"/></svg>
-            <span>Photos à venir</span>
-          </div>
-          <div class="pf-project-overlay"><span class="pf-project-cta">Voir la galerie →</span></div>
-        </div>
-        <div class="pf-project-meta">
-          <span class="pf-project-tag">Identité visuelle</span>
-          <span class="pf-project-title">Blue Beach</span>
-          <span class="pf-project-count" data-project-count></span>
-        </div>
-      </div>
-
-      <div class="pf-project reveal" data-project data-slug="ncare" data-title="N'CARE" data-max="10">
-        <div class="pf-project-cover">
-          <img data-project-cover alt="N'CARE, logo &amp; packaging" loading="lazy">
-          <div class="pf-project-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="15" rx="2"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M21 16l-5.5-5.5L3 19"/></svg>
-            <span>Photos à venir</span>
-          </div>
-          <div class="pf-project-overlay"><span class="pf-project-cta">Voir la galerie →</span></div>
-        </div>
-        <div class="pf-project-meta">
-          <span class="pf-project-tag">Logo &amp; Packaging</span>
-          <span class="pf-project-title">N'CARE</span>
-          <span class="pf-project-count" data-project-count></span>
-        </div>
-      </div>
-
-      <div class="pf-project reveal" data-project data-slug="visionet-drone" data-title="Visionet Drone" data-max="10">
-        <div class="pf-project-cover">
-          <img data-project-cover alt="Visionet Drone, identité visuelle" loading="lazy">
-          <div class="pf-project-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="15" rx="2"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M21 16l-5.5-5.5L3 19"/></svg>
-            <span>Photos à venir</span>
-          </div>
-          <div class="pf-project-overlay"><span class="pf-project-cta">Voir la galerie →</span></div>
-        </div>
-        <div class="pf-project-meta">
-          <span class="pf-project-tag">Identité visuelle</span>
-          <span class="pf-project-title">Visionet Drone</span>
-          <span class="pf-project-count" data-project-count></span>
-        </div>
-      </div>
-
-      <div class="pf-project reveal" data-project data-slug="boheme-maison" data-title="Bohème Maison" data-max="10" data-cover="2">
-        <div class="pf-project-cover">
-          <img data-project-cover alt="Bohème Maison, identité visuelle" loading="lazy">
-          <div class="pf-project-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="15" rx="2"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M21 16l-5.5-5.5L3 19"/></svg>
-            <span>Photos à venir</span>
-          </div>
-          <div class="pf-project-overlay"><span class="pf-project-cta">Voir la galerie →</span></div>
-        </div>
-        <div class="pf-project-meta">
-          <span class="pf-project-tag">Identité visuelle</span>
-          <span class="pf-project-title">Bohème Maison</span>
-          <span class="pf-project-count" data-project-count></span>
-        </div>
-      </div>
-
-      <div class="pf-project reveal" data-project data-slug="vif" data-title="Vivons en Forme (VIF)" data-max="10">
-        <div class="pf-project-cover">
-          <img data-project-cover alt="Vivons en Forme (VIF), réseaux sociaux" loading="lazy">
-          <div class="pf-project-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="15" rx="2"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M21 16l-5.5-5.5L3 19"/></svg>
-            <span>Photos à venir</span>
-          </div>
-          <div class="pf-project-overlay"><span class="pf-project-cta">Voir la galerie →</span></div>
-        </div>
-        <div class="pf-project-meta">
-          <span class="pf-project-tag">Réseaux sociaux</span>
-          <span class="pf-project-title">Vivons en Forme (VIF)</span>
-          <span class="pf-project-count" data-project-count></span>
-        </div>
-      </div>
-
-      <div class="pf-project reveal" data-project data-slug="cma" data-title="CMA Hauts-de-France" data-max="10">
-        <div class="pf-project-cover">
-          <img data-project-cover alt="CMA Hauts-de-France, community management" loading="lazy">
-          <div class="pf-project-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="15" rx="2"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M21 16l-5.5-5.5L3 19"/></svg>
-            <span>Photos à venir</span>
-          </div>
-          <div class="pf-project-overlay"><span class="pf-project-cta">Voir la galerie →</span></div>
-        </div>
-        <div class="pf-project-meta">
-          <span class="pf-project-tag">Community management</span>
-          <span class="pf-project-title">CMA Hauts-de-France</span>
-          <span class="pf-project-count" data-project-count></span>
-        </div>
-      </div>
-
-    </div>
-   </div>
-  </section>
-
-  <!-- LIGHTBOX -->
-  <div class="lightbox" data-lightbox hidden>
-    <button class="lightbox-close" data-lightbox-close aria-label="Fermer">&times;</button>
-    <button class="lightbox-prev" data-lightbox-prev aria-label="Photo précédente">‹</button>
-    <button class="lightbox-next" data-lightbox-next aria-label="Photo suivante">›</button>
-    <div class="lightbox-stage">
-      <img class="lightbox-image" data-lightbox-image src="" alt="">
-    </div>
-    <div class="lightbox-meta">
-      <span class="lightbox-title" data-lightbox-title></span>
-      <span class="lightbox-count" data-lightbox-count></span>
-    </div>
+<div class="menu" id="menu" data-menu hidden>
+  <nav aria-label="Menu">
+    <ul>
+      <li><a class="menu-link" href="index.html" style="--i:0">Accueil</a></li>
+      <li><a class="menu-link" href="about.html" style="--i:1">Qui sommes-nous&nbsp;?</a></li>
+      <li><a class="menu-link" href="portfolio.html" style="--i:2" aria-current="page">Portfolio</a></li>
+      <li><a class="menu-link" href="services.html" style="--i:3">Services</a></li>
+      <li><a class="menu-link" href="contact.html" style="--i:4">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="menu-foot">
+    <a href="mailto:contact@pictureselection.com">contact@pictureselection.com</a>
+    <p>Lille, Hauts-de-France</p>
   </div>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <span class="brand"><img src="assets/img/picsel-logo.webp" alt="Picture Selection"><span>Picture </span><span class="brand-red">Selection</span></span>
-        <p>Studio de Direction Artistique &amp; Communication Globale.</p>
-      </div>
-      <div class="footer-cols">
-        <div class="footer-col">
-          <span class="footer-col-title">Navigation</span>
-          <a href="index.html">Accueil</a>
-          <a href="about.html">Qui sommes-nous ?</a>
-          <a href="services.html">Services</a>
-          <a href="contact.html">Contact</a>
-        </div>
-        <div class="footer-col">
-          <span class="footer-col-title">Contact</span>
-          <a href="mailto:contact@pictureselection.com">contact@pictureselection.com</a>
-          <a href="https://www.instagram.com/picture.selection">Instagram</a>
-          <a href="https://www.facebook.com/picselcrea">Facebook</a>
-          <a href="https://www.tiktok.com/@picselcrea">TikTok</a>
-          <a href="https://www.behance.net/picture-selection">Behance</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Picture Selection · Branding &amp; Direction Artistique</span>
-      <span>Lille · Hauts-de-France</span>
-    </div>
-  </footer>
-
 </div>
 
-<script src="assets/js/main.js"></script>
+<main id="contenu" tabindex="-1">
+<section class="hero ">
+  <div class="wrap hero-grid">
+    <h1 class="hero-title t-xl"><span class="kicker">Portfolio de direction artistique, branding et print</span><span class="hero-main" data-split>9 projets, une même <span class="r">exigence</span></span></h1>
+    <div class="hero-side">
+      <p class="lead">Culture, sport, technologie, artisanat. Chaque projet répond à une cible précise.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec work work--all">
+  <div class="wrap">
+    <h2 class="sr-only">Projets</h2>
+    <ul class="cards">
+      <li class="card card--a" data-reveal>
+        <button class="card-btn" type="button" data-gallery="festival-marrakech" data-title="Festival international du film de Marrakech" aria-label="Ouvrir la galerie Festival international du film de Marrakech, 17 visuels">
+          <span class="media"><span class="px" data-parallax><img src="assets/img/portfolio/festival-marrakech/1-thumb.webp" srcset="assets/img/portfolio/festival-marrakech/1-thumb.webp 800w, assets/img/portfolio/festival-marrakech/1.webp 1600w" sizes="(min-width: 900px) 58vw, 100vw" width="800" height="500" alt="" loading="eager" decoding="async"></span></span>
+          <span class="sel" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="sel-dims mono">1600 × 1000 px</span></span>
+        </button>
+        <div class="card-meta">
+          <h3 class="card-title">Festival international du film de Marrakech</h3>
+          <p class="card-tag">Direction artistique et print</p>
+          <p class="card-count mono">17 visuels</p>
+        </div>
+      </li>
+      <li class="card card--b" data-reveal>
+        <button class="card-btn" type="button" data-gallery="trophee-hassan-ii" data-title="Trophée Hassan II de Golf" aria-label="Ouvrir la galerie Trophée Hassan II de Golf, 15 visuels">
+          <span class="media"><span class="px" data-parallax><img src="assets/img/portfolio/trophee-hassan-ii/1-thumb.webp" srcset="assets/img/portfolio/trophee-hassan-ii/1-thumb.webp 800w, assets/img/portfolio/trophee-hassan-ii/1.webp 1600w" sizes="(min-width: 900px) 42vw, 100vw" width="800" height="566" alt="" loading="eager" decoding="async"></span></span>
+          <span class="sel" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="sel-dims mono">1600 × 1132 px</span></span>
+        </button>
+        <div class="card-meta">
+          <h3 class="card-title">Trophée Hassan II de Golf</h3>
+          <p class="card-tag">Charte graphique et print</p>
+          <p class="card-count mono">15 visuels</p>
+        </div>
+      </li>
+      <li class="card card--c" data-reveal>
+        <button class="card-btn" type="button" data-gallery="cryptr" data-title="Cryptr" aria-label="Ouvrir la galerie Cryptr, 10 visuels">
+          <span class="media"><span class="px" data-parallax><img src="assets/img/portfolio/cryptr/1-thumb.webp" srcset="assets/img/portfolio/cryptr/1-thumb.webp 800w, assets/img/portfolio/cryptr/1.webp 1600w" sizes="(min-width: 900px) 33vw, 100vw" width="800" height="500" alt="" loading="lazy" decoding="async"></span></span>
+          <span class="sel" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="sel-dims mono">1600 × 1000 px</span></span>
+        </button>
+        <div class="card-meta">
+          <h3 class="card-title">Cryptr</h3>
+          <p class="card-tag">Identité visuelle</p>
+          <p class="card-count mono">10 visuels</p>
+        </div>
+      </li>
+      <li class="card card--c" data-reveal>
+        <button class="card-btn" type="button" data-gallery="boheme-maison" data-title="Bohème Maison" aria-label="Ouvrir la galerie Bohème Maison, 6 visuels">
+          <span class="media"><span class="px" data-parallax><img src="assets/img/portfolio/boheme-maison/2-thumb.webp" srcset="assets/img/portfolio/boheme-maison/2-thumb.webp 800w, assets/img/portfolio/boheme-maison/2.webp 1600w" sizes="(min-width: 900px) 33vw, 100vw" width="800" height="800" alt="" loading="lazy" decoding="async"></span></span>
+          <span class="sel" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="sel-dims mono">1600 × 1600 px</span></span>
+        </button>
+        <div class="card-meta">
+          <h3 class="card-title">Bohème Maison</h3>
+          <p class="card-tag">Identité visuelle</p>
+          <p class="card-count mono">6 visuels</p>
+        </div>
+      </li>
+      <li class="card card--c" data-reveal>
+        <button class="card-btn" type="button" data-gallery="visionet-drone" data-title="Visionet Drone" aria-label="Ouvrir la galerie Visionet Drone, 6 visuels">
+          <span class="media"><span class="px" data-parallax><img src="assets/img/portfolio/visionet-drone/1-thumb.webp" srcset="assets/img/portfolio/visionet-drone/1-thumb.webp 800w, assets/img/portfolio/visionet-drone/1.webp 1191w" sizes="(min-width: 900px) 33vw, 100vw" width="800" height="566" alt="" loading="lazy" decoding="async"></span></span>
+          <span class="sel" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="sel-dims mono">1191 × 842 px</span></span>
+        </button>
+        <div class="card-meta">
+          <h3 class="card-title">Visionet Drone</h3>
+          <p class="card-tag">Identité visuelle</p>
+          <p class="card-count mono">6 visuels</p>
+        </div>
+      </li>
+      <li class="card card--b" data-reveal>
+        <button class="card-btn" type="button" data-gallery="blue-beach" data-title="Blue Beach" aria-label="Ouvrir la galerie Blue Beach, 6 visuels">
+          <span class="media" style="--ar: 4 / 3"><span class="px" data-parallax><img src="assets/img/portfolio/blue-beach/1-thumb.webp" srcset="assets/img/portfolio/blue-beach/1-thumb.webp 800w, assets/img/portfolio/blue-beach/1.webp 1600w" sizes="(min-width: 900px) 42vw, 100vw" width="800" height="480" alt="" loading="lazy" decoding="async"></span></span>
+          <span class="sel" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="sel-dims mono">1600 × 960 px</span></span>
+        </button>
+        <div class="card-meta">
+          <h3 class="card-title">Blue Beach</h3>
+          <p class="card-tag">Identité visuelle</p>
+          <p class="card-count mono">6 visuels</p>
+        </div>
+      </li>
+      <li class="card card--a" data-reveal>
+        <button class="card-btn" type="button" data-gallery="ncare" data-title="N&#x27;CARE" aria-label="Ouvrir la galerie N&#x27;CARE, 7 visuels">
+          <span class="media"><span class="px" data-parallax><img src="assets/img/portfolio/ncare/1-thumb.webp" srcset="assets/img/portfolio/ncare/1-thumb.webp 800w, assets/img/portfolio/ncare/1.webp 1600w" sizes="(min-width: 900px) 58vw, 100vw" width="800" height="533" alt="" loading="lazy" decoding="async"></span></span>
+          <span class="sel" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="sel-dims mono">1600 × 1067 px</span></span>
+        </button>
+        <div class="card-meta">
+          <h3 class="card-title">N&#x27;CARE</h3>
+          <p class="card-tag">Logo et packaging</p>
+          <p class="card-count mono">7 visuels</p>
+        </div>
+      </li>
+      <li class="card card--d" data-reveal>
+        <button class="card-btn" type="button" data-gallery="vif" data-title="Vivons en Forme (VIF)" aria-label="Ouvrir la galerie Vivons en Forme (VIF), 2 visuels">
+          <span class="media"><span class="px" data-parallax><img src="assets/img/portfolio/vif/1-thumb.webp" srcset="assets/img/portfolio/vif/1-thumb.webp 800w, assets/img/portfolio/vif/1.webp 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="533" alt="" loading="lazy" decoding="async"></span></span>
+          <span class="sel" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="sel-dims mono">1600 × 1067 px</span></span>
+        </button>
+        <div class="card-meta">
+          <h3 class="card-title">Vivons en Forme (VIF)</h3>
+          <p class="card-tag">Réseaux sociaux</p>
+          <p class="card-count mono">2 visuels</p>
+        </div>
+      </li>
+      <li class="card card--d" data-reveal>
+        <button class="card-btn" type="button" data-gallery="cma" data-title="CMA Hauts-de-France" aria-label="Ouvrir la galerie CMA Hauts-de-France, 2 visuels">
+          <span class="media"><span class="px" data-parallax><img src="assets/img/portfolio/cma/1-thumb.webp" srcset="assets/img/portfolio/cma/1-thumb.webp 800w, assets/img/portfolio/cma/1.webp 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="621" alt="" loading="lazy" decoding="async"></span></span>
+          <span class="sel" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="sel-dims mono">1600 × 1242 px</span></span>
+        </button>
+        <div class="card-meta">
+          <h3 class="card-title">CMA Hauts-de-France</h3>
+          <p class="card-tag">Community management</p>
+          <p class="card-count mono">2 visuels</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec cta">
+  <div class="wrap cta-grid">
+    <h2 class="t-l" data-split>Votre projet, le <span class="r">dixième</span></h2>
+    <div class="cta-side">
+      <p class="lead">Identité, édition ou réseaux sociaux&nbsp;: parlons de votre cible et de vos objectifs.</p>
+      <a class="btn" href="contact.html">Écrire au studio</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <p class="ft-sign t-l" data-split>«&nbsp;Des idées en fusion, des designs en <span class="nw"><span class="r">action</span>&nbsp;»</span></p>
+    <div class="ft-grid">
+      <div class="ft-id">
+        <img src="assets/img/picsel-logo-mark.webp" width="72" height="72" alt="Picture Selection" loading="lazy">
+        <p>Studio de direction artistique et de communication. Lille, Hauts-de-France.</p>
+      </div>
+      <nav class="ft-col" aria-label="Pages du site">
+        <p class="ft-h">Pages</p>
+        <a href="index.html">Accueil</a>
+        <a href="about.html">Qui sommes-nous&nbsp;?</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="ft-col">
+        <p class="ft-h">Contact</p>
+        <a href="mailto:contact@pictureselection.com">contact@pictureselection.com</a>
+        <p>À distance, partout en France</p>
+      </div>
+      <div class="ft-col">
+        <p class="ft-h">Réseaux</p>
+        <a href="https://www.instagram.com/picture.selection">Instagram</a>
+        <a href="https://www.facebook.com/picselcrea">Facebook</a>
+        <a href="https://www.tiktok.com/@picselcrea">TikTok</a>
+        <a href="https://www.behance.net/picture-selection">Behance</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p>© 2026 Picture Selection</p>
+      <a href="#contenu">Haut de page</a>
+    </div>
+  </div>
+</footer>
+<div class="lb" role="dialog" aria-modal="true" aria-labelledby="lb-title" data-lightbox hidden>
+  <div class="lb-top">
+    <p class="lb-title" id="lb-title" data-lb-title></p>
+    <button class="lb-btn" type="button" data-lb-close>Fermer</button>
+  </div>
+  <figure class="lb-stage" data-lb-stage>
+    <img data-lb-img alt="">
+  </figure>
+  <div class="lb-bottom">
+    <button class="lb-btn" type="button" data-lb-prev>Précédent</button>
+    <p class="mono lb-count" data-lb-count aria-hidden="true"></p>
+    <button class="lb-btn" type="button" data-lb-next>Suivant</button>
+  </div>
+  <p class="sr-only" aria-live="polite" data-lb-live></p>
+</div>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>

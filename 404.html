@@ -4,90 +4,105 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page introuvable | Picture Selection</title>
-<meta name="description" content="Cette page n'existe pas ou plus. Retrouvez Picture Selection, studio de direction artistique et branding à Lille.">
+<meta name="description" content="Cette page n’existe pas ou a été déplacée.">
 <meta name="robots" content="noindex">
-<link rel="icon" href="assets/img/picsel-logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#371A44">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Picture Selection">
+<meta property="og:url" content="https://pictureselection.com/404.html">
+<meta property="og:title" content="Page introuvable | Picture Selection">
+<meta property="og:description" content="Cette page n’existe pas ou a été déplacée.">
+<meta property="og:image" content="https://pictureselection.com/assets/img/og-picsel.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<link rel="preload" href="assets/fonts/bebas-neue-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/poppins-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 
-<div class="site-bg"></div>
+<a class="skip" href="#contenu">Aller au contenu</a>
 
-<div class="page">
-
-  <!-- HEADER -->
-  <header class="header">
-    <a href="index.html" class="brand">
-      <img src="assets/img/picsel-logo.webp" alt="Picture Selection">
-      <span><span>Picture </span><span class="brand-red">Selection</span></span>
-    </a>
-    <button class="hamburger" data-menu-toggle aria-label="Menu" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-    <nav class="nav">
-      <a href="index.html" class="nav-link">Accueil</a>
-      <a href="about.html" class="nav-link">Qui sommes-nous ?</a>
-      <a href="portfolio.html" class="nav-link">Portfolio</a>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="contact.html" class="nav-cta">Contact</a>
-    </nav>
-  </header>
-
-  <nav class="mobile-nav" data-mobile-nav>
-    <a href="index.html">Accueil</a>
-    <a href="about.html">Qui sommes-nous ?</a>
+<header class="hd" data-header>
+  <a class="hd-logo" href="index.html" aria-label="Picture Selection, accueil"><img src="assets/img/picsel-logo-mark.webp" width="44" height="44" alt=""></a>
+  <nav class="hd-nav" aria-label="Navigation principale">
+    <a href="about.html">Qui sommes-nous&nbsp;?</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
+    <a class="btn btn--sm" href="contact.html">Contact</a>
   </nav>
+  <button class="hd-menu" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle><span data-menu-label>Menu</span></button>
+</header>
 
-  <!-- 404 -->
-  <section class="page-hero" style="text-align:center; display:flex; flex-direction:column; align-items:center;">
-    <span class="eyebrow reveal">Erreur 404</span>
-    <h1 class="reveal">Cette page n'existe pas.</h1>
-    <p class="reveal">Le lien est peut-être obsolète, ou l'adresse a été mal saisie. Retrouvez le site depuis l'accueil.</p>
-    <div class="hero-actions reveal" style="justify-content:center; margin-top:12px;">
-      <a href="index.html" class="btn btn-primary">Retour à l'accueil</a>
-      <a href="portfolio.html" class="btn btn-outline">Voir le portfolio</a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <span class="brand"><img src="assets/img/picsel-logo.webp" alt="Picture Selection"><span>Picture </span><span class="brand-red">Selection</span></span>
-        <p>Studio de Direction Artistique &amp; Communication Globale.</p>
-      </div>
-      <div class="footer-cols">
-        <div class="footer-col">
-          <span class="footer-col-title">Navigation</span>
-          <a href="index.html">Accueil</a>
-          <a href="about.html">Qui sommes-nous ?</a>
-          <a href="portfolio.html">Portfolio</a>
-          <a href="services.html">Services</a>
-        </div>
-        <div class="footer-col">
-          <span class="footer-col-title">Contact</span>
-          <a href="mailto:contact@pictureselection.com">contact@pictureselection.com</a>
-          <a href="https://www.instagram.com/picture.selection">Instagram</a>
-          <a href="https://www.facebook.com/picselcrea">Facebook</a>
-          <a href="https://www.tiktok.com/@picselcrea">TikTok</a>
-          <a href="https://www.behance.net/picture-selection">Behance</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Picture Selection · Branding &amp; Direction Artistique</span>
-      <span>Lille · Hauts-de-France</span>
-    </div>
-  </footer>
-
+<div class="menu" id="menu" data-menu hidden>
+  <nav aria-label="Menu">
+    <ul>
+      <li><a class="menu-link" href="index.html" style="--i:0">Accueil</a></li>
+      <li><a class="menu-link" href="about.html" style="--i:1">Qui sommes-nous&nbsp;?</a></li>
+      <li><a class="menu-link" href="portfolio.html" style="--i:2">Portfolio</a></li>
+      <li><a class="menu-link" href="services.html" style="--i:3">Services</a></li>
+      <li><a class="menu-link" href="contact.html" style="--i:4">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="menu-foot">
+    <a href="mailto:contact@pictureselection.com">contact@pictureselection.com</a>
+    <p>Lille, Hauts-de-France</p>
+  </div>
 </div>
 
-<script src="assets/js/main.js"></script>
+<main id="contenu" tabindex="-1">
+<section class="hero ">
+  <div class="wrap hero-grid">
+    <h1 class="hero-title t-xl"><span class="kicker">Erreur 404</span><span class="hero-main" data-split>Cette page n’est pas dans la <span class="r">sélection</span></span></h1>
+    <div class="hero-side">
+      <p class="lead">Le lien est peut-être ancien, ou l’adresse mal saisie.</p>
+      <a class="btn" href="index.html">Revenir à l’accueil</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <p class="ft-sign t-l" data-split>«&nbsp;Des idées en fusion, des designs en <span class="nw"><span class="r">action</span>&nbsp;»</span></p>
+    <div class="ft-grid">
+      <div class="ft-id">
+        <img src="assets/img/picsel-logo-mark.webp" width="72" height="72" alt="Picture Selection" loading="lazy">
+        <p>Studio de direction artistique et de communication. Lille, Hauts-de-France.</p>
+      </div>
+      <nav class="ft-col" aria-label="Pages du site">
+        <p class="ft-h">Pages</p>
+        <a href="index.html">Accueil</a>
+        <a href="about.html">Qui sommes-nous&nbsp;?</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="ft-col">
+        <p class="ft-h">Contact</p>
+        <a href="mailto:contact@pictureselection.com">contact@pictureselection.com</a>
+        <p>À distance, partout en France</p>
+      </div>
+      <div class="ft-col">
+        <p class="ft-h">Réseaux</p>
+        <a href="https://www.instagram.com/picture.selection">Instagram</a>
+        <a href="https://www.facebook.com/picselcrea">Facebook</a>
+        <a href="https://www.tiktok.com/@picselcrea">TikTok</a>
+        <a href="https://www.behance.net/picture-selection">Behance</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p>© 2026 Picture Selection</p>
+      <a href="#contenu">Haut de page</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
