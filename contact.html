@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Picture Selection, agence de direction artistique Lille</title>
+<meta name="description" content="Contactez Picture Selection, studio de direction artistique et branding basé à Lille, disponible partout en Hauts-de-France et à distance.">
+<link rel="canonical" href="https://pictureselection.com/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact | Picture Selection">
+<meta property="og:description" content="Un message, une idée, un brief encore flou ? Écrivez-nous, réponse rapide et sans engagement.">
+<meta property="og:image" content="/assets/img/picsel-logo.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="assets/img/picsel-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="intro-loader" data-intro-loader aria-hidden="true">
+  <div class="intro-center">
+    <div class="intro-ring">
+      <svg viewBox="0 0 100 100">
+        <circle class="intro-ring-track" cx="50" cy="50" r="46"></circle>
+        <circle class="intro-ring-bar" cx="50" cy="50" r="46"></circle>
+      </svg>
+      <img class="intro-logo" src="assets/img/picsel-logo.webp" alt="">
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var skip = false;
+  try { skip = sessionStorage.getItem("psIntroPlayed") === "1"; } catch (e) {}
+  if (!skip && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) skip = true;
+  if (skip) {
+    var loader = document.currentScript.previousElementSibling;
+    if (loader) loader.style.display = "none";
+  }
+})();
+</script>
+<noscript><style>.intro-loader{display:none!important}</style></noscript>
+
+<div class="site-bg"></div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <a href="index.html" class="brand">
+      <img src="assets/img/picsel-logo.webp" alt="Picture Selection">
+      <span><span>Picture </span><span class="brand-red">Selection</span></span>
+    </a>
+    <button class="hamburger" data-menu-toggle aria-label="Menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="about.html" class="nav-link">Qui sommes-nous ?</a>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="contact.html" class="nav-cta is-current">Contact</a>
+    </nav>
+  </header>
+
+  <nav class="mobile-nav" data-mobile-nav>
+    <a href="index.html">Accueil</a>
+    <a href="about.html">Qui sommes-nous ?</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html" class="is-current">Contact</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <span class="eyebrow reveal">Parlons de votre projet</span>
+    <h1 class="reveal">Donnons vie à votre marque</h1>
+    <p class="reveal">Un message, une idée, un brief encore flou&nbsp;? Écrivez-nous, réponse rapide et sans engagement.</p>
+  </section>
+
+  <div class="section">
+   <div class="wrap card-cream" style="padding-top:64px;padding-bottom:64px">
+
+    <!-- FORM + INFOS -->
+    <div class="contact-grid">
+
+      <div class="reveal">
+        <form class="contact-form" data-contact-form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="_subject" value="Nouveau message du site pictureselection.com">
+          <div class="form-row">
+            <label class="field">
+              <span>Nom</span>
+              <input name="name" required type="text" autocomplete="name">
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input name="email" required type="email" autocomplete="email">
+            </label>
+          </div>
+          <label class="field">
+            <span>Objet</span>
+            <input name="subject" type="text">
+          </label>
+          <label class="field">
+            <span>Message</span>
+            <textarea name="message" required rows="5"></textarea>
+          </label>
+          <button type="submit" class="btn btn-dark" style="align-self:flex-start">Envoyer le message</button>
+        </form>
+        <div class="contact-success" data-contact-success hidden>
+          <span class="title">Message envoyé ✓</span>
+          <p>Merci, nous revenons vers vous très rapidement.</p>
+        </div>
+        <div class="contact-success" data-contact-error hidden>
+          <span class="title">Message non envoyé</span>
+          <p>Une erreur est survenue. Réessayez, ou écrivez-nous directement à <a href="mailto:contact@pictureselection.com">contact@pictureselection.com</a>.</p>
+        </div>
+      </div>
+
+      <div class="contact-info reveal">
+        <div class="contact-info-block">
+          <span class="label">Email</span>
+          <a href="mailto:contact@pictureselection.com">contact@pictureselection.com</a>
+        </div>
+        <div class="contact-info-block">
+          <span class="label">Localisation</span>
+          <span class="value">Lille · Hauts-de-France</span>
+          <span class="sub">Disponible à distance, partout en France</span>
+        </div>
+        <div class="contact-info-block social">
+          <span class="label">Réseaux</span>
+          <a href="https://www.instagram.com/picture.selection">Instagram</a>
+          <a href="https://www.facebook.com/picselcrea">Facebook</a>
+          <a href="https://www.tiktok.com/@picselcrea">TikTok</a>
+          <a href="https://www.behance.net/picture-selection">Behance</a>
+        </div>
+      </div>
+
+    </div>
+   </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand"><img src="assets/img/picsel-logo.webp" alt="Picture Selection"><span>Picture </span><span class="brand-red">Selection</span></span>
+        <p>Studio de Direction Artistique &amp; Communication Globale.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <span class="footer-col-title">Navigation</span>
+          <a href="index.html">Accueil</a>
+          <a href="about.html">Qui sommes-nous ?</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="services.html">Services</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">Contact</span>
+          <a href="mailto:contact@pictureselection.com">contact@pictureselection.com</a>
+          <a href="https://www.instagram.com/picture.selection">Instagram</a>
+          <a href="https://www.facebook.com/picselcrea">Facebook</a>
+          <a href="https://www.tiktok.com/@picselcrea">TikTok</a>
+          <a href="https://www.behance.net/picture-selection">Behance</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Picture Selection · Branding &amp; Direction Artistique</span>
+      <span>Lille · Hauts-de-France</span>
+    </div>
+  </footer>
+
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
