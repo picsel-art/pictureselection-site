@@ -3,193 +3,174 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Qui sommes-nous ? | Picture Selection, agence père-fille à Lille</title>
-<meta name="description" content="Picture Selection : une histoire de transmission entre un père directeur artistique et sa fille, stratège en communication digitale. Notre ADN, notre duo, notre mission.">
+<title>Qui sommes-nous ? | Picture Selection, studio père-fille à Lille</title>
+<meta name="description" content="Picture Selection, duo père-fille à Lille : 25 ans de direction artistique entre Alger, Rabat, Paris et Lille, et une experte en communication.">
 <link rel="canonical" href="https://pictureselection.com/about.html">
+<meta name="theme-color" content="#371A44">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Qui sommes-nous ? | Picture Selection">
-<meta property="og:description" content="Une histoire de transmission entre un père directeur artistique et sa fille, stratège en communication digitale.">
-<meta property="og:image" content="/assets/img/picsel-logo.png">
-<meta name="twitter:card" content="summary">
-<link rel="icon" href="assets/img/picsel-logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Picture Selection">
+<meta property="og:url" content="https://pictureselection.com/about.html">
+<meta property="og:title" content="Qui sommes-nous ? | Picture Selection, studio père-fille à Lille">
+<meta property="og:description" content="Picture Selection, duo père-fille à Lille : 25 ans de direction artistique entre Alger, Rabat, Paris et Lille, et une experte en communication.">
+<meta property="og:image" content="https://pictureselection.com/assets/img/og-picsel.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<link rel="preload" href="assets/fonts/bebas-neue-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/poppins-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 
-<div class="intro-loader" data-intro-loader aria-hidden="true">
-  <div class="intro-center">
-    <div class="intro-ring">
-      <svg viewBox="0 0 100 100">
-        <circle class="intro-ring-track" cx="50" cy="50" r="46"></circle>
-        <circle class="intro-ring-bar" cx="50" cy="50" r="46"></circle>
-      </svg>
-      <img class="intro-logo" src="assets/img/picsel-logo.webp" alt="">
-    </div>
-  </div>
-</div>
-<script>
-(function () {
-  var skip = false;
-  try { skip = sessionStorage.getItem("psIntroPlayed") === "1"; } catch (e) {}
-  if (!skip && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) skip = true;
-  if (skip) {
-    var loader = document.currentScript.previousElementSibling;
-    if (loader) loader.style.display = "none";
-  }
-})();
-</script>
-<noscript><style>.intro-loader{display:none!important}</style></noscript>
+<a class="skip" href="#contenu">Aller au contenu</a>
 
-<div class="site-bg"></div>
-
-<div class="page">
-
-  <!-- HEADER -->
-  <header class="header">
-    <a href="index.html" class="brand">
-      <img src="assets/img/picsel-logo.webp" alt="Picture Selection">
-      <span><span>Picture </span><span class="brand-red">Selection</span></span>
-    </a>
-    <button class="hamburger" data-menu-toggle aria-label="Menu" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-    <nav class="nav">
-      <a href="index.html" class="nav-link">Accueil</a>
-      <a href="about.html" class="nav-link is-current">Qui sommes-nous ?</a>
-      <a href="portfolio.html" class="nav-link">Portfolio</a>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="contact.html" class="nav-cta">Contact</a>
-    </nav>
-  </header>
-
-  <nav class="mobile-nav" data-mobile-nav>
-    <a href="index.html">Accueil</a>
-    <a href="about.html" class="is-current">Qui sommes-nous ?</a>
+<header class="hd" data-header>
+  <a class="hd-logo" href="index.html" aria-label="Picture Selection, accueil"><img src="assets/img/picsel-logo-mark.webp" width="44" height="44" alt=""></a>
+  <nav class="hd-nav" aria-label="Navigation principale">
+    <a href="about.html" aria-current="page">Qui sommes-nous&nbsp;?</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
+    <a class="btn btn--sm" href="contact.html">Contact</a>
   </nav>
+  <button class="hd-menu" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle><span data-menu-label>Menu</span></button>
+</header>
 
-  <!-- HERO -->
-  <section class="about-hero">
-    <span class="eyebrow reveal">Notre histoire</span>
-    <h1 class="reveal">Un héritage de passion.</h1>
-  </section>
-
-  <!-- RECIT -->
-  <section class="section">
-    <div class="recit-grid">
-
-      <div class="recit-photo recit-photo--left reveal">
-        <img src="assets/img/portrait-pere.png" alt="Portrait du père, direction artistique, Picture Selection">
-      </div>
-
-      <div class="recit-text">
-        <p class="lead reveal">Bien avant de devenir un duo professionnel, nous partagions déjà une même passion&nbsp;: celle de créer et de donner du sens à l'image.</p>
-        <p class="reveal">Cette passion a voyagé d'une génération à l'autre&nbsp;: d'un père à son fils, qui a choisi d'en faire son métier en devenant directeur artistique, puis d'un père à sa fille, qui a grandi au cœur des univers créatifs et a développé à son tour une sensibilité pour la communication et le digital.</p>
-        <p class="reveal">Aujourd'hui, cette histoire familiale s'écrit autrement&nbsp;: à travers une collaboration où nos regards se complètent.</p>
-      </div>
-
-      <div class="recit-photo recit-photo--right reveal">
-        <img src="assets/img/portrait-fille.png" alt="Portrait de la fille, stratégie et contenu, Picture Selection">
-      </div>
-
-    </div>
-  </section>
-
-  <!-- DUO -->
-  <section class="section">
-    <div class="wrap">
-      <h2 class="section-title-center reveal">Complémentarité des regards.</h2>
-      <div class="duo-grid">
-        <div class="duo-card reveal">
-          <div class="duo-photo">
-            <img src="assets/img/portrait-pere.png" alt="Smail B., direction artistique">
-          </div>
-          <div>
-            <span class="duo-role">Direction artistique</span>
-            <h3>Smail B.</h3>
-          </div>
-          <div class="duo-bio" data-bio>
-            <p>Directeur Artistique Senior, je façonne des univers visuels premium depuis plus de 25 ans. Après une solide carrière au cœur des plus grandes agences et de projets d'envergure internationale, j'ai choisi de mettre cette exigence directement au service de mes clients en m'installant comme indépendant en 2023.</p>
-            <p>Mon parcours a été forgé à l'école des grandes agences de communication. Mes années passées chez <strong>Ogilvy</strong> et <strong>DDB</strong> ont développé ma capacité à traduire des stratégies complexes en concepts visuels puissants pour des marques internationales (Kia, Danone, Henkel).</p>
-            <p>J'ai ensuite eu l'honneur de piloter l'image d'événements prestigieux de renommée mondiale. J'ai notamment orchestré la direction artistique et la production print du <strong>Festival International du Film de Marrakech</strong>, avant de devenir pendant huit ans le DA exclusif du mythique <strong>Trophée Hassan II de Golf</strong>, collaborant étroitement avec les circuits professionnels les plus exigeants (PGA, European Tour, LET).</p>
-            <p>Aujourd'hui, j'apporte toute cette expertise, de l'idée créative à la maîtrise technique absolue de la chaîne graphique, avec la réactivité, l'écoute et la proximité d'un partenaire indépendant.</p>
-          </div>
-          <button class="duo-toggle" data-bio-toggle type="button" aria-expanded="false" hidden>
-            <span data-bio-toggle-label>Lire la suite</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-        </div>
-        <div class="duo-card reveal">
-          <div class="duo-photo">
-            <img src="assets/img/portrait-fille.png" alt="Yasmine B., stratégie et contenu">
-          </div>
-          <div>
-            <span class="duo-role">Stratégie &amp; contenu</span>
-            <h3>Yasmine B.</h3>
-          </div>
-          <div class="duo-bio" data-bio>
-            <p>Titulaire d'un double Master (notamment de l'<strong>ISTC Lille</strong>), j'ai forgé mon expertise sur le terrain en France en pilotant la communication digitale de l'<strong>Association FLVS</strong> et de <strong>CMA France</strong>. Native du web, je combine vision stratégique et créativité pour propulser la visibilité des marques. De la conception éditoriale à la création de contenus vidéo et graphiques, je déploie des écosystèmes performants pour fédérer et engager durablement vos communautés.</p>
-          </div>
-          <button class="duo-toggle" data-bio-toggle type="button" aria-expanded="false" hidden>
-            <span data-bio-toggle-label>Lire la suite</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MISSION -->
-  <section class="section">
-    <div class="mission-box reveal">
-      <span class="eyebrow">Notre mission</span>
-      <p>Nous accompagnons les entreprises qui veulent créer une marque à leur image&nbsp;: forte, claire et habitée par une véritable personnalité.</p>
-    </div>
-  </section>
-
-  <!-- MANIFESTE -->
-  <section class="manifesto">
-    <p class="reveal">Car derrière chaque projet, il y a une histoire singulière. Notre rôle est de lui donner <span class="accent">sa juste image</span>… puis <span class="accent">sa propre voix</span>.</p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <span class="brand"><img src="assets/img/picsel-logo.webp" alt="Picture Selection"><span>Picture </span><span class="brand-red">Selection</span></span>
-        <p>Studio de Direction Artistique &amp; Communication Globale.</p>
-      </div>
-      <div class="footer-cols">
-        <div class="footer-col">
-          <span class="footer-col-title">Navigation</span>
-          <a href="index.html">Accueil</a>
-          <a href="portfolio.html">Portfolio</a>
-          <a href="services.html">Services</a>
-          <a href="contact.html">Contact</a>
-        </div>
-        <div class="footer-col">
-          <span class="footer-col-title">Contact</span>
-          <a href="mailto:contact@pictureselection.com">contact@pictureselection.com</a>
-          <a href="https://www.instagram.com/picture.selection">Instagram</a>
-          <a href="https://www.facebook.com/picselcrea">Facebook</a>
-          <a href="https://www.tiktok.com/@picselcrea">TikTok</a>
-          <a href="https://www.behance.net/picture-selection">Behance</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Picture Selection · Branding &amp; Direction Artistique</span>
-      <span>Lille · Hauts-de-France</span>
-    </div>
-  </footer>
-
+<div class="menu" id="menu" data-menu hidden>
+  <nav aria-label="Menu">
+    <ul>
+      <li><a class="menu-link" href="index.html" style="--i:0">Accueil</a></li>
+      <li><a class="menu-link" href="about.html" style="--i:1" aria-current="page">Qui sommes-nous&nbsp;?</a></li>
+      <li><a class="menu-link" href="portfolio.html" style="--i:2">Portfolio</a></li>
+      <li><a class="menu-link" href="services.html" style="--i:3">Services</a></li>
+      <li><a class="menu-link" href="contact.html" style="--i:4">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="menu-foot">
+    <a href="mailto:contact@pictureselection.com">contact@pictureselection.com</a>
+    <p>Lille, Hauts-de-France</p>
+  </div>
 </div>
 
-<script src="assets/js/main.js"></script>
+<main id="contenu" tabindex="-1">
+<section class="hero ">
+  <div class="wrap hero-grid">
+    <h1 class="hero-title t-xl"><span class="kicker">Picture Selection, studio père-fille à Lille</span><span class="hero-main" data-split>Une voix, deux <span class="r">regards</span></span></h1>
+    <div class="hero-side">
+      <p class="lead">Un père et sa fille. L’un construit la forme, l’autre construit la stratégie.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec story">
+  <div class="wrap story-grid">
+    <p class="story-lead">Avant d’être un duo professionnel, nous partagions une passion&nbsp;: créer, et donner du sens à l’image.</p>
+    <div class="story-text">
+      <p>Cette passion a voyagé d’une génération à l’autre. D’un père à son fils, devenu directeur artistique. Puis d’un père à sa fille, qui a grandi au cœur des univers créatifs.</p>
+      <p>Aujourd’hui, cette histoire familiale s’écrit à deux. Nos regards se complètent sur chaque projet.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec duo-sec">
+  <div class="wrap duo">
+    <article class="person" data-reveal>
+      <span class="media"><span class="px" data-parallax><img src="assets/img/portrait-pere-720.webp" srcset="assets/img/portrait-pere-720.webp 720w, assets/img/portrait-pere-1100.webp 1100w" sizes="(min-width: 900px) 40vw, 100vw" width="720" height="900" alt="Portrait de Smail B., directeur artistique de Picture Selection" loading="lazy" decoding="async"></span></span>
+      <h2 class="t-l" data-split>L’<span class="r">œil</span></h2>
+      <p class="person-name">Smail B., direction artistique</p>
+      <div class="person-bio">
+        <p>Directeur artistique depuis plus de 25 ans, formé chez Ogilvy et DDB. Il y traduit des stratégies complexes en concepts visuels, pour Kia, Danone ou Henkel.</p>
+        <p>Il signe la direction artistique et la production print de 4 éditions du Festival international du film de Marrakech. Pendant 8 ans, il est le directeur artistique exclusif du Trophée Hassan II de Golf, aux côtés du PGA, de l’European Tour et du LET.</p>
+        <p>Indépendant depuis 2023, il maîtrise toute la chaîne graphique, de l’idée au BAT.</p>
+      </div>
+    </article>
+    <article class="person" data-reveal>
+      <span class="media"><span class="px" data-parallax><img src="assets/img/portrait-fille-720.webp" srcset="assets/img/portrait-fille-720.webp 720w, assets/img/portrait-fille-1100.webp 1100w" sizes="(min-width: 900px) 40vw, 100vw" width="720" height="1082" alt="Portrait de Yasmine B., stratégie et communication chez Picture Selection" loading="lazy" decoding="async"></span></span>
+      <h2 class="t-l" data-split>La <span class="r">tête</span></h2>
+      <p class="person-name">Yasmine B., stratégie et communication</p>
+      <div class="person-bio">
+        <p>Titulaire d’un double master en management et communication, notamment à l’ISTC Lille.</p>
+        <p>Elle a piloté la communication digitale de l’Association FLVS et de CMA France. Contenus éditoriaux, vidéo et graphiques&nbsp;: elle construit des écosystèmes qui fédèrent les communautés.</p>
+        <p>Chaque contenu est relié à un objectif, une cible et un résultat.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="sec route-sec">
+  <div class="wrap">
+    <h2 class="t-l" data-split>D’Alger à <span class="r">Lille</span></h2>
+    <p class="lead route-lead">25 ans de métier entre le Maghreb et l’Europe. Deux cultures visuelles, une même exigence.</p>
+    <div class="route" data-progress="route">
+      <span class="route-line" aria-hidden="true"><i></i></span>
+      <span class="route-track" aria-hidden="true"><span class="route-dot"></span></span>
+      <ol class="route-cities">
+        <li class="t-m" data-step>Alger</li>
+        <li class="t-m" data-step>Rabat</li>
+        <li class="t-m" data-step>Paris</li>
+        <li class="t-m" data-step>Lille</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sec light manifesto">
+  <div class="wrap">
+    <h2 class="t-l" data-split>Chaque projet a une histoire. Nous lui donnons sa juste <span class="r">image.</span></h2>
+    <p class="lead">Nous accompagnons les entreprises qui veulent une marque à leur image&nbsp;: forte, claire et habitée par une vraie personnalité.</p>
+  </div>
+</section>
+
+<section class="sec cta">
+  <div class="wrap cta-grid">
+    <h2 class="t-l" data-split>Deux regards sur votre <span class="r">projet</span></h2>
+    <div class="cta-side">
+      <p class="lead">Décrivez-nous votre besoin. Vous recevez une seule recommandation, pensée à deux.</p>
+      <a class="btn" href="contact.html">Écrire au studio</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <p class="ft-sign t-l" data-split>«&nbsp;Des idées en fusion, des designs en <span class="nw"><span class="r">action</span>&nbsp;»</span></p>
+    <div class="ft-grid">
+      <div class="ft-id">
+        <img src="assets/img/picsel-logo-mark.webp" width="72" height="72" alt="Picture Selection" loading="lazy">
+        <p>Studio de direction artistique et de communication. Lille, Hauts-de-France.</p>
+      </div>
+      <nav class="ft-col" aria-label="Pages du site">
+        <p class="ft-h">Pages</p>
+        <a href="index.html">Accueil</a>
+        <a href="about.html">Qui sommes-nous&nbsp;?</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="ft-col">
+        <p class="ft-h">Contact</p>
+        <a href="mailto:contact@pictureselection.com">contact@pictureselection.com</a>
+        <p>À distance, partout en France</p>
+      </div>
+      <div class="ft-col">
+        <p class="ft-h">Réseaux</p>
+        <a href="https://www.instagram.com/picture.selection">Instagram</a>
+        <a href="https://www.facebook.com/picselcrea">Facebook</a>
+        <a href="https://www.tiktok.com/@picselcrea">TikTok</a>
+        <a href="https://www.behance.net/picture-selection">Behance</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p>© 2026 Picture Selection</p>
+      <a href="#contenu">Haut de page</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
