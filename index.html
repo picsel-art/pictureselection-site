@@ -103,7 +103,7 @@
       </li>
       <li class="frame" data-frame>
         <span class="frame-no mono" aria-hidden="true">3A</span>
-        <button class="frame-btn" type="button" data-gallery="cryptr" data-title="Cryptr" aria-label="Ouvrir la galerie Cryptr, 14 visuels">
+        <button class="frame-btn" type="button" data-gallery="cryptr" data-title="Cryptr" aria-label="Ouvrir la galerie Cryptr, 15 visuels">
           <img src="assets/img/portfolio/cryptr/1-thumb.webp" width="800" height="450" alt="" loading="eager" decoding="async">
           <svg class="pencil" viewBox="0 0 400 280" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M318 26C250 4 120 8 58 52C8 88 6 176 64 226C128 280 288 278 352 222C404 176 400 84 330 40C296 20 246 12 200 14"/></svg>
         </button>
@@ -209,14 +209,14 @@
         </div>
       </li>
       <li class="card card--w" data-reveal>
-        <button class="card-btn" type="button" data-gallery="cryptr" data-title="Cryptr" aria-label="Ouvrir la galerie Cryptr, 14 visuels">
+        <button class="card-btn" type="button" data-gallery="cryptr" data-title="Cryptr" aria-label="Ouvrir la galerie Cryptr, 15 visuels">
           <span class="media"><span class="px" data-parallax><img src="assets/img/portfolio/cryptr/1-thumb.webp" srcset="assets/img/portfolio/cryptr/1-thumb.webp 800w, assets/img/portfolio/cryptr/1.webp 1600w" sizes="(min-width: 900px) 66vw, 100vw" width="800" height="450" alt="" loading="lazy" decoding="async"></span></span>
           <span class="sel" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="sel-dims mono">1600 × 900 px</span></span>
         </button>
         <div class="card-meta">
           <h3 class="card-title">Cryptr</h3>
           <p class="card-tag">Identité visuelle</p>
-          <p class="card-count mono">14 visuels</p>
+          <p class="card-count mono">15 visuels</p>
         </div>
       </li>
     </ul>
@@ -302,10 +302,14 @@
   </div>
   <figure class="lb-stage" data-lb-stage>
     <img data-lb-img alt="">
+    <video data-lb-video muted loop playsinline preload="none" hidden></video>
   </figure>
   <div class="lb-bottom">
     <button class="lb-btn" type="button" data-lb-prev>Précédent</button>
-    <p class="mono lb-count" data-lb-count aria-hidden="true"></p>
+    <div class="lb-mid">
+      <p class="mono lb-count" data-lb-count aria-hidden="true"></p>
+      <button class="lb-btn" type="button" data-lb-play hidden>Pause</button>
+    </div>
     <button class="lb-btn" type="button" data-lb-next>Suivant</button>
   </div>
   <p class="sr-only" aria-live="polite" data-lb-live></p>

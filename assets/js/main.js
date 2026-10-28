@@ -248,6 +248,8 @@
   var lb = $('[data-lightbox]');
   if (lb) {
     var lbImg = $('[data-lb-img]', lb);
+    var lbVideo = $('[data-lb-video]', lb);
+    var lbPlay = $('[data-lb-play]', lb);
     var lbTitle = $('[data-lb-title]', lb);
     var lbCount = $('[data-lb-count]', lb);
     var lbLive = $('[data-lb-live]', lb);
@@ -268,10 +270,43 @@
       return manifestPromise;
     };
     var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+    // Les vidéos (animations de logo) tournent en boucle, sans son ;
+    // le bouton Pause les arrête, et rien ne démarre seul en mouvement réduit.
+    var syncPlay = function () { lbPlay.textContent = lbVideo.paused ? 'Lecture' : 'Pause'; };
+    lbVideo.addEventListener('play', syncPlay);
+    lbVideo.addEventListener('pause', syncPlay);
+    lbPlay.addEventListener('click', function () {
+      if (lbVideo.paused) { var p = lbVideo.play(); if (p && p.catch) p.catch(syncPlay); } else lbVideo.pause();
+    });
     var show = function (i, dir) {
       index = (i + items.length) % items.length;
       var item = items[index];
       var mine = ++token;
+      var isVideo = item.type === 'video';
+      lbVideo.pause();
+      lbImg.hidden = isVideo;
+      lbVideo.hidden = !isVideo;
+      lbPlay.hidden = !isVideo;
+      lbCount.textContent = pad(index + 1) + ' / ' + pad(items.length);
+      lbLive.textContent = 'Visuel ' + (index + 1) + ' sur ' + items.length;
+      [1, -1].forEach(function (d) {
+        var n = items[(index + d + items.length) % items.length];
+        if (n) (new Image()).src = n.type === 'video' ? n.poster : n.src;
+      });
+      if (isVideo) {
+        lbVideo.classList.remove('is-ready');
+        lbVideo.style.setProperty('--dx', (dir || 0) * 14 + 'px');
+        lbVideo.muted = true;
+        lbVideo.poster = item.poster;
+        lbVideo.src = item.webm && !lbVideo.canPlayType('video/mp4; codecs="avc1.640028"') ? item.webm : item.src;
+        lbVideo.width = item.w;
+        lbVideo.height = item.h;
+        lbVideo.setAttribute('aria-label', name + ', animation, visuel ' + (index + 1) + ' sur ' + items.length);
+        if (!reduced) { var p = lbVideo.play(); if (p && p.catch) p.catch(syncPlay); }
+        syncPlay();
+        window.requestAnimationFrame(function () { lbVideo.classList.add('is-ready'); });
+        return;
+      }
       lbImg.classList.remove('is-ready');
       lbImg.style.setProperty('--dx', (dir || 0) * 14 + 'px');
       var pre = new Image();
@@ -284,16 +319,15 @@
         window.requestAnimationFrame(function () { lbImg.classList.add('is-ready'); });
       };
       pre.src = item.src;
-      lbCount.textContent = pad(index + 1) + ' / ' + pad(items.length);
-      lbLive.textContent = 'Visuel ' + (index + 1) + ' sur ' + items.length;
-      [1, -1].forEach(function (d) { var n = items[(index + d + items.length) % items.length]; if (n) (new Image()).src = n.src; });
     };
     var openGallery = function (slug, title, from) {
       loadManifest().then(function (m) {
         var entry = m[slug];
         if (!entry || !entry.files || !entry.files.length) return;
         var base = 'assets/img/portfolio/' + slug + '/';
-        items = entry.files.map(function (f) { return { src: base + f.file, w: f.w, h: f.h }; });
+        items = entry.files.map(function (f) {
+          return { src: base + f.file, w: f.w, h: f.h, type: f.type || 'image', poster: f.poster ? base + f.poster : '', webm: f.webm ? base + f.webm : '' };
+        });
         name = title;
         opener = from;
         lbTitle.textContent = title;
@@ -313,7 +347,8 @@
       lb.classList.remove('is-open');
       doc.classList.remove('lb-lock');
       setInert(false);
-      window.setTimeout(function () { lb.hidden = true; lbImg.removeAttribute('src'); }, 160);
+      lbVideo.pause();
+      window.setTimeout(function () { lb.hidden = true; lbImg.removeAttribute('src'); lbVideo.removeAttribute('src'); }, 160);
       if (opener) opener.focus();
     };
 

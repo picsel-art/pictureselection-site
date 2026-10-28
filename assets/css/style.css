@@ -700,7 +700,8 @@ a.info-big, .info-links a { width: fit-content; background: linear-gradient(curr
 }
 .lb-btn:hover { border-color: var(--white); }
 .lb-stage { position: relative; margin: 0; display: flex; align-items: center; justify-content: center; min-height: 0; padding: clamp(16px, 3vw, 40px) var(--pad); overflow: hidden; touch-action: pan-y; }
-.lb-stage img {
+.lb-mid { display: flex; align-items: center; gap: 16px; }
+.lb-stage img, .lb-stage video {
   max-width: 100%;
   max-height: 100%;
   width: auto;
@@ -710,7 +711,7 @@ a.info-big, .info-links a { width: fit-content; background: linear-gradient(curr
   transform: translateX(var(--dx, 0));
   transition: opacity var(--m-200) var(--ease-out), transform var(--m-200) var(--ease-out);
 }
-.lb-stage img.is-ready { opacity: 1; transform: none; }
+.lb-stage img.is-ready, .lb-stage video.is-ready { opacity: 1; transform: none; }
 
 /* ---------- Transitions entre pages (navigateurs compatibles) ---------- */
 @view-transition { navigation: auto; }
@@ -724,7 +725,7 @@ a.info-big, .info-links a { width: fit-content; background: linear-gradient(curr
   html.js .media img,
   html.js .proof::before,
   .menu-link,
-  .lb-stage img { transform: none !important; transition: none !important; }
+  .lb-stage img, .lb-stage video { transform: none !important; transition: none !important; }
   html.js .media::after { display: none; }
   html.js .card .card-btn::before { transition: none; }
   .hd, .hd.is-hidden { transform: none; transition: none; }

@@ -100,13 +100,21 @@
     ]
   },
   "cryptr": {
-    "cover": 1,
+    "cover": 2,
     "coverThumb": {
       "file": "1-thumb.webp",
       "w": 800,
       "h": 450
     },
     "files": [
+      {
+        "file": "0-anim.mp4",
+        "w": 1920,
+        "h": 1080,
+        "type": "video",
+        "poster": "0-poster.webp",
+        "webm": "0-anim.webm"
+      },
       {
         "file": "1.webp",
         "w": 1600,
