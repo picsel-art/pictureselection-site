@@ -28,7 +28,7 @@
 
   --pad: clamp(16px, 4vw, 56px);
   --max: 1360px;
-  --hd-h: 72px;
+  --hd-h: 80px;
   --gap: 24px;
 
   /* Mouvement : jetons pour l'interface */
@@ -209,8 +209,15 @@ html.js [data-split].is-in .w > span { transform: none; }
 }
 .hd.is-scrolled { border-bottom-color: var(--line); }
 .hd.is-hidden { transform: translateY(-101%); transition-timing-function: var(--ease-in); transition-duration: var(--m-200); }
-.hd-logo { display: block; flex: none; }
-.hd-logo img { width: 44px; height: 44px; }
+.hd-logo { display: block; flex: none; transform-origin: left center; transition: transform var(--m-300) var(--ease-out); }
+.hd-logo img { width: 76px; height: 76px; }
+/* En haut de page le logo s'affiche en grand ; il se réduit dès que la lecture commence. */
+.hd.is-scrolled .hd-logo { transform: scale(.72); }
+@media (max-width: 859px) {
+  :root { --hd-h: 68px; }
+  .hd-logo img { width: 58px; height: 58px; }
+  .hd.is-scrolled .hd-logo { transform: scale(.8); }
+}
 .hd-nav { display: flex; align-items: center; gap: clamp(22px, 2.6vw, 40px); }
 .hd-nav a:not(.btn) {
   position: relative;
@@ -759,6 +766,7 @@ a.info-big, .info-links a { width: fit-content; background: linear-gradient(curr
   html.js .media::after { display: none; }
   html.js .card .card-btn::before { transition: none; }
   .hd, .hd.is-hidden { transform: none; transition: none; }
+  .hd-logo { transition: none; }
   .vf i, .frame.is-sel .vf i { transition: none !important; }
   .vf b { display: none; }
   .frame.is-sel .frame-btn img, html.js .is-in .card-btn:hover .media img, html.js .is-in .card-btn:focus-visible .media img { animation: none; }
