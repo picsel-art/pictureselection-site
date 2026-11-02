@@ -28,7 +28,8 @@
 
   --pad: clamp(16px, 4vw, 56px);
   --max: 1360px;
-  --hd-h: 80px;
+  --hd-h: 88px;
+  --logo: 76px;
   --gap: 24px;
 
   /* Mouvement : jetons pour l'interface */
@@ -202,7 +203,8 @@ html.js [data-split].is-in .w > span { transform: none; }
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding-inline: var(--pad);
+  /* Même grille que le contenu : le logo s'aligne sur les titres, le bouton Contact sur leur bord droit. */
+  padding-inline: max(var(--pad), calc((100% - var(--max)) / 2 + var(--pad)));
   background: var(--prune) url(../img/grain.png);
   border-bottom: 1px solid transparent;
   transition: transform var(--m-300) var(--ease-out), border-color var(--m-200) linear;
@@ -210,12 +212,13 @@ html.js [data-split].is-in .w > span { transform: none; }
 .hd.is-scrolled { border-bottom-color: var(--line); }
 .hd.is-hidden { transform: translateY(-101%); transition-timing-function: var(--ease-in); transition-duration: var(--m-200); }
 .hd-logo { display: block; flex: none; transform-origin: left center; transition: transform var(--m-300) var(--ease-out); }
-.hd-logo img { width: 76px; height: 76px; }
-/* En haut de page le logo s'affiche en grand ; il se réduit dès que la lecture commence. */
+/* Le disque rouge est centré à 45,4 % du fichier (le texte courbe occupe le bas à droite) :
+   l'image descend de 4,6 % de sa taille pour poser le centre du disque sur l'axe des liens. */
+.hd-logo img { width: var(--logo); height: var(--logo); transform: translateY(calc(var(--logo) * .046)); }
+/* En haut de page le logo s'affiche en grand ; il se réduit autour du centre du disque dès que la lecture commence. */
 .hd.is-scrolled .hd-logo { transform: scale(.72); }
 @media (max-width: 859px) {
-  :root { --hd-h: 68px; }
-  .hd-logo img { width: 58px; height: 58px; }
+  :root { --hd-h: 72px; --logo: 58px; }
   .hd.is-scrolled .hd-logo { transform: scale(.8); }
 }
 .hd-nav { display: flex; align-items: center; gap: clamp(22px, 2.6vw, 40px); }
