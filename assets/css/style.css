@@ -667,6 +667,36 @@ a.info-big, .info-links a { width: fit-content; background: linear-gradient(curr
 @media (max-width: 899px) { .ft-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ft-id { grid-column: 1 / -1; } }
 @media (max-width: 479px) { .ft-grid { grid-template-columns: 1fr; } }
 
+/* ---------- Pages légales ---------- */
+.hero + .legal { padding-top: clamp(24px, 4vw, 56px); }
+.legal-block, .legal-date { max-width: 920px; }
+.legal-block { padding-block: clamp(28px, 3.4vw, 44px); border-top: 1px solid var(--line); }
+.legal-block .t-s { margin-bottom: 18px; }
+.legal-block p { color: var(--t-2); max-width: 40em; }
+.legal-block p + p { margin-top: 12px; }
+.legal-block a, .form-note a { text-decoration: underline; text-underline-offset: 3px; }
+.legal-list { display: grid; grid-template-columns: minmax(0, 15em) minmax(0, 1fr); gap: 10px 32px; margin: 0; }
+.legal-list dt { font-weight: 500; }
+.legal-list dd { margin: 0; color: var(--t-2); }
+@media (max-width: 599px) {
+  .legal-list { grid-template-columns: 1fr; gap: 4px; }
+  .legal-list dd { margin-bottom: 12px; }
+}
+/* Champ à compléter avant la mise en ligne : volontairement très visible */
+.todo {
+  display: inline;
+  padding: 2px 8px;
+  background: var(--white);
+  color: var(--prune);
+  font: 400 13.5px/1.9 var(--f-mono);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.legal-date { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--t-3); font-size: 14px; }
+.form-note { font-size: 14px; color: var(--p-2); }
+.ft-legal { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+.ft-legal a:hover { color: var(--white); }
+
 /* ---------- Galerie plein écran ---------- */
 .lb {
   position: fixed;
