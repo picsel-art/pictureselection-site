@@ -41,6 +41,7 @@
   --m-reveal: 700ms;
   --m-draw: 900ms;
   --m-settle: 1200ms;
+  --m-focus: 760ms;
   --ease-out: cubic-bezier(.16, 1, .3, 1);
   --ease-in: cubic-bezier(.7, 0, .84, 0);
 }
@@ -300,38 +301,39 @@ html.js .intro {
   cursor: pointer;
 }
 .intro-box { position: relative; width: clamp(120px, 15vw, 168px); aspect-ratio: 1; }
-.intro-box img { width: 100%; height: 100%; opacity: 0; transform: scale(.94); }
-.intro-box .pencil { position: absolute; left: -24%; top: -24%; width: 148%; height: 148%; overflow: visible; }
-.intro-box .pencil path { stroke-width: 2.4; }
-.intro-crop {
-  position: absolute;
-  width: 22px; height: 22px;
-  border: 0 solid rgba(255,255,255,.7);
-  opacity: 0;
-}
-.intro-crop.tl { left: -44%; top: -44%; border-left-width: 1px; border-top-width: 1px; --x: -24px; --y: -24px; }
-.intro-crop.tr { right: -44%; top: -44%; border-right-width: 1px; border-top-width: 1px; --x: 24px; --y: -24px; }
-.intro-crop.bl { left: -44%; bottom: -44%; border-left-width: 1px; border-bottom-width: 1px; --x: -24px; --y: 24px; }
-.intro-crop.br { right: -44%; bottom: -44%; border-right-width: 1px; border-bottom-width: 1px; --x: 24px; --y: 24px; }
-.intro.is-playing .intro-crop { animation: introCrop var(--m-300) var(--ease-out) forwards; }
-.intro.is-playing img { animation: introLogo var(--m-300) var(--m-150) var(--ease-out) forwards; }
-.intro.is-playing .pencil path { animation: draw 600ms 380ms var(--ease-out) forwards; }
+.intro-box img { width: 100%; height: 100%; opacity: 0; }
+.intro.is-playing .intro-box img { animation: intro-focus 900ms linear forwards; }
 .intro.is-leaving { transform: translateY(-100%); transition: transform var(--m-300) var(--ease-in); }
-@keyframes introCrop { from { opacity: 0; transform: translate(var(--x), var(--y)); } to { opacity: 1; transform: none; } }
-@keyframes introLogo { to { opacity: 1; transform: none; } }
-@keyframes draw { from { stroke-dashoffset: 1; opacity: 1; } to { stroke-dashoffset: 0; opacity: 1; } }
-
-/* ---------- Cercle de sélection (crayon gras rouge) ---------- */
-.pencil path {
-  fill: none;
-  stroke: var(--red);
-  stroke-width: 4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 1 1.02;
-  stroke-dashoffset: 1;
-  opacity: 0;
+/* La mise au point cherche, dépasse, puis se verrouille. */
+@keyframes intro-focus {
+  0% { opacity: 0; filter: blur(14px); }
+  12% { opacity: 1; filter: blur(14px); }
+  40% { filter: blur(0); }
+  58% { filter: blur(4px); }
+  76%, 100% { opacity: 1; filter: blur(0); }
 }
+
+/* ---------- Viseur : coins de visée et collimateur de mise au point ---------- */
+.vf { position: absolute; inset: -6px; z-index: 2; pointer-events: none; }
+.vf i { position: absolute; width: 18px; height: 18px; border: 0 solid var(--red); opacity: 0; transition: transform var(--m-200) var(--ease-in), opacity var(--m-150) linear; }
+.vf i:nth-child(1) { left: 0; top: 0; border-left-width: 2px; border-top-width: 2px; transform: translate(-16px, -16px); }
+.vf i:nth-child(2) { right: 0; top: 0; border-right-width: 2px; border-top-width: 2px; transform: translate(16px, -16px); }
+.vf i:nth-child(3) { right: 0; bottom: 0; border-right-width: 2px; border-bottom-width: 2px; transform: translate(16px, 16px); }
+.vf i:nth-child(4) { left: 0; bottom: 0; border-left-width: 2px; border-bottom-width: 2px; transform: translate(-16px, 16px); }
+.vf b { position: absolute; left: 50%; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border: 1.5px solid var(--red); opacity: 0; }
+.frame.is-sel .vf i, .intro.is-playing .vf i { opacity: 1; transform: none; transition: transform 380ms var(--ease-out), opacity var(--m-100) linear; }
+.frame.is-sel .vf b { animation: vf-af var(--m-focus) linear both; }
+@keyframes vf-af { 0%, 76% { opacity: 1; } 77%, 100% { opacity: 0; } }
+/* Intro : le viseur cadre le logo, le collimateur se pose sur le centre du disque rouge. */
+.vf--intro { inset: -22%; }
+.vf--intro i { width: 26px; height: 26px; }
+.vf--intro i:nth-child(1) { transform: translate(-40px, -40px); }
+.vf--intro i:nth-child(2) { transform: translate(40px, -40px); }
+.vf--intro i:nth-child(3) { transform: translate(40px, 40px); }
+.vf--intro i:nth-child(4) { transform: translate(-40px, 40px); }
+.intro.is-playing .vf--intro i { transition: transform 460ms var(--ease-out), opacity var(--m-150) linear; }
+.vf--intro b { left: 46.8%; top: 46.8%; width: 16px; height: 16px; margin: -8px 0 0 -8px; }
+.intro.is-playing .vf--intro b { animation: vf-af 900ms linear both; }
 
 /* ---------- Héros ---------- */
 .hero { padding-top: calc(var(--hd-h) + clamp(56px, 11vh, 140px)); padding-bottom: clamp(48px, 7vw, 104px); }
@@ -364,14 +366,18 @@ html.js .intro {
 .frame-btn img {
   width: 100%; height: 100%;
   object-fit: cover;
+  clip-path: inset(0);
   filter: grayscale(1);
   transition: filter var(--m-300) var(--ease-out);
 }
-.frame-btn .pencil { position: absolute; left: -9%; top: -15%; width: 118%; height: 130%; overflow: visible; pointer-events: none; z-index: 2; }
-.frame-btn .pencil path { transition: opacity var(--m-150) linear, stroke-dashoffset 0s linear var(--m-150); }
-.frame.is-sel .frame-btn img { filter: none; }
-.frame.is-sel .pencil path { opacity: 1; stroke-dashoffset: 0; transition: stroke-dashoffset 480ms var(--ease-out), opacity 0s; }
-.sheet.is-first .frame.is-sel .pencil path { transition-duration: var(--m-draw), 0s; }
+/* L'image choisie passe en couleur pendant que la mise au point se fait. */
+.frame.is-sel .frame-btn img { filter: none; animation: vf-focus var(--m-focus) linear both; }
+@keyframes vf-focus {
+  0% { filter: blur(9px); }
+  35% { filter: blur(0); }
+  55% { filter: blur(3px); }
+  75%, 100% { filter: blur(0); }
+}
 .frame-name { display: block; margin-top: 14px; font-size: 14px; line-height: 1.4; color: var(--t-2); }
 .frame.is-sel .frame-name { color: var(--white); }
 .sheet-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; margin-top: clamp(24px, 3vw, 40px); }
@@ -759,7 +765,9 @@ a.info-big, .info-links a { width: fit-content; background: linear-gradient(curr
   html.js .media::after { display: none; }
   html.js .card .card-btn::before { transition: none; }
   .hd, .hd.is-hidden { transform: none; transition: none; }
-  .pencil path, .frame-btn .pencil path, .frame.is-sel .pencil path { transition: none !important; animation: none !important; }
+  .vf i, .frame.is-sel .vf i { transition: none !important; }
+  .vf b { display: none; }
+  .frame.is-sel .frame-btn img { animation: none; }
   .frame-btn img { transition: none; }
   .menu, .lb, .sel { transition: opacity var(--m-100) linear; }
   .intro { display: none !important; }

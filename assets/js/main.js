@@ -128,8 +128,8 @@
     window.addEventListener('resize', function () { if (window.innerWidth >= 860) closeMenu(false); });
   }
 
-  // Planche contact : le cercle rouge suit l'image sélectionnée,
-  // qui passe du noir et blanc à la couleur.
+  // Planche contact : le viseur se pose sur l'image sélectionnée,
+  // qui passe du noir et blanc à la couleur pendant la mise au point.
   var sheet = $('[data-sheet]');
   var sheetSection = sheet ? sheet.closest('.sheet') : null;
   var rows = sheet ? $$('[data-drift]', sheet) : [];
@@ -145,13 +145,11 @@
     });
     if (!reduced && 'IntersectionObserver' in window) {
       frames.forEach(function (x) { x.classList.remove('is-sel'); });
-      sheetSection.classList.add('is-first');
       var firstIo = new IntersectionObserver(function (entries) {
         if (!entries[0].isIntersecting || !revealed) return;
         firstIo.disconnect();
         window.setTimeout(function () {
           if (!$('.is-sel', sheet)) select(frames[0]);
-          window.setTimeout(function () { sheetSection.classList.remove('is-first'); }, 1000);
         }, 350);
       }, { threshold: 0.35 });
       sheet.__start = function () { firstIo.observe(sheet); };
@@ -209,7 +207,7 @@
   });
   requestFrame();
 
-  // Intro de l'accueil : traits de coupe, logo, cercle de sélection,
+  // Intro de l'accueil : le viseur cadre le logo, la mise au point se fait,
   // puis le rideau se lève. Une fois par session, cliquable pour passer.
   function begin() {
     startReveals();
