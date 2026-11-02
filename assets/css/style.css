@@ -500,26 +500,20 @@ html.js .is-in .media::after { transform: scaleY(0); }
 html.js .is-in .media img { transform: none; }
 html.js .is-in .card-btn:hover .media img { transform: scale(1.03); transition-duration: var(--m-300); }
 
-/* Poignées de sélection au survol et au focus */
-.sel { position: absolute; inset: 0; z-index: 2; pointer-events: none; opacity: 0; transition: opacity var(--m-150) var(--ease-out); }
-.sel::before { content: ""; position: absolute; inset: 0; border: 1px solid var(--red); }
-.sel i {
-  position: absolute;
-  width: 9px; height: 9px;
-  margin: -4.5px 0 0 -4.5px;
-  background: var(--white);
-  border: 1px solid var(--red);
-}
-.sel i:nth-child(1) { left: 0; top: 0; }
-.sel i:nth-child(2) { left: 50%; top: 0; }
-.sel i:nth-child(3) { left: 100%; top: 0; }
-.sel i:nth-child(4) { left: 100%; top: 50%; }
-.sel i:nth-child(5) { left: 100%; top: 100%; }
-.sel i:nth-child(6) { left: 50%; top: 100%; }
-.sel i:nth-child(7) { left: 0; top: 100%; }
-.sel i:nth-child(8) { left: 0; top: 50%; }
-.sel-dims { position: absolute; left: 10px; top: 10px; padding: 4px 8px; background: var(--prune); color: var(--white); }
-.card-btn:hover .sel, .card-btn:focus-visible .sel { opacity: 1; }
+/* Viseur au survol et au focus : les traits de coupe s'effacent, les coins de visée
+   se resserrent, la mise au point se fait, puis les dimensions du visuel s'affichent. */
+.vf--card i { width: 22px; height: 22px; }
+/* Départ plus court que sur la planche : les coins restent dans la marge de 16 px sur mobile. */
+.vf--card i:nth-child(1) { transform: translate(-8px, -8px); }
+.vf--card i:nth-child(2) { transform: translate(8px, -8px); }
+.vf--card i:nth-child(3) { transform: translate(8px, 8px); }
+.vf--card i:nth-child(4) { transform: translate(-8px, 8px); }
+.card-btn:hover .vf i, .card-btn:focus-visible .vf i { opacity: 1; transform: none; transition: transform 380ms var(--ease-out), opacity var(--m-100) linear; }
+.card-btn:hover .vf b, .card-btn:focus-visible .vf b { animation: vf-af var(--m-focus) linear both; }
+html.js .is-in .card-btn:hover .media img, html.js .is-in .card-btn:focus-visible .media img { animation: vf-focus var(--m-focus) linear both; }
+html.js .card.is-in .card-btn:hover::before, html.js .card.is-in .card-btn:focus-visible::before { opacity: 0; transition-delay: 0s; transition-duration: var(--m-150); }
+.vf-info { position: absolute; left: 16px; bottom: 14px; padding: 3px 8px; background: var(--prune); color: var(--white); opacity: 0; transition: opacity var(--m-150) linear; }
+.card-btn:hover .vf-info, .card-btn:focus-visible .vf-info { opacity: 1; transition-delay: 560ms; }
 
 .card-meta { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 24px; margin-top: 22px; }
 .card-title { font-family: var(--f-display); font-size: clamp(28px, 2.4vw, 38px); line-height: 1; text-transform: uppercase; }
@@ -767,9 +761,10 @@ a.info-big, .info-links a { width: fit-content; background: linear-gradient(curr
   .hd, .hd.is-hidden { transform: none; transition: none; }
   .vf i, .frame.is-sel .vf i { transition: none !important; }
   .vf b { display: none; }
-  .frame.is-sel .frame-btn img { animation: none; }
+  .frame.is-sel .frame-btn img, html.js .is-in .card-btn:hover .media img, html.js .is-in .card-btn:focus-visible .media img { animation: none; }
+  .card-btn:hover .vf-info, .card-btn:focus-visible .vf-info { transition-delay: 0s; }
   .frame-btn img { transition: none; }
-  .menu, .lb, .sel { transition: opacity var(--m-100) linear; }
+  .menu, .lb { transition: opacity var(--m-100) linear; }
   .intro { display: none !important; }
 }
 
